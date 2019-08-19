@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 
         
-        if Auth.auth().currentUser != nil{
+        if Auth.auth().currentUser == nil{
             
             let viewControllerLogIn = storyBoard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
             self.window?.rootViewController = viewControllerLogIn

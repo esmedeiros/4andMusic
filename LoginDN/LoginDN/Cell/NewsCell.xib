@@ -63,7 +63,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Última atualização:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQI-BN-P8Y">
-                        <rect key="frame" x="128" y="274.5" width="132" height="12"/>
+                        <rect key="frame" x="179" y="274.5" width="132" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="A1T-LY-OK1"/>
                             <constraint firstAttribute="width" constant="132" id="eX1-Ps-eO9"/>
@@ -82,7 +82,7 @@
                     <constraint firstAttribute="trailing" secondItem="VLQ-wt-JnR" secondAttribute="trailing" constant="10" id="Gsl-Vr-Rz7"/>
                     <constraint firstItem="yhF-Cg-gsa" firstAttribute="leading" secondItem="KdS-wN-JtN" secondAttribute="leading" constant="10" id="IQe-FB-95Y"/>
                     <constraint firstItem="yhF-Cg-gsa" firstAttribute="top" secondItem="KdS-wN-JtN" secondAttribute="top" constant="152" id="SpG-Eu-fRL"/>
-                    <constraint firstItem="aob-5I-fZh" firstAttribute="leading" secondItem="tQI-BN-P8Y" secondAttribute="trailing" constant="29" id="TKr-nA-dIo"/>
+                    <constraint firstItem="aob-5I-fZh" firstAttribute="leading" secondItem="tQI-BN-P8Y" secondAttribute="trailing" constant="-22" id="TKr-nA-dIo"/>
                     <constraint firstItem="IvV-HV-heX" firstAttribute="top" secondItem="VLQ-wt-JnR" secondAttribute="bottom" constant="10" id="WvV-p0-3Dn"/>
                     <constraint firstAttribute="trailing" secondItem="IvV-HV-heX" secondAttribute="trailing" constant="10" id="c18-MM-4HD"/>
                     <constraint firstAttribute="trailing" secondItem="vBM-Ck-pFK" secondAttribute="trailing" id="dVU-la-J0n"/>
