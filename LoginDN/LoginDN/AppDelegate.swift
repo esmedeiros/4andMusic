@@ -21,20 +21,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
 
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-
-        
-        if Auth.auth().currentUser == nil{
-            
-            let viewControllerLogIn = storyBoard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-            self.window?.rootViewController = viewControllerLogIn
-            
-        }else{
-            let viewControllerNews = storyBoard.instantiateViewController(withIdentifier: "NewsViewController") as! NewsViewController
-            self.window?.rootViewController = viewControllerNews
-            
-        }
-        self.window?.makeKeyAndVisible()
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//
+//        
+//        if Auth.auth().currentUser == nil{
+//            
+//            let viewControllerLogIn = storyBoard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+//            self.window?.rootViewController = viewControllerLogIn
+//            
+//        }else{
+//            let viewControllerNews = storyBoard.instantiateViewController(withIdentifier: "NewsViewController") as! NewsViewController
+//            self.window?.rootViewController = viewControllerNews
+//            
+//        }
+//        self.window?.makeKeyAndVisible()
         
         return true
         
