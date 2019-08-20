@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfb-yv-iBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5915.9420289855079" y="-287.27678571428572"/>
+            <point key="canvasLocation" x="6826.0869565217399" y="-287.27678571428572"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="WcX-5N-LM7">
@@ -369,38 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jxb-24-Zb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5915.9420289855079" y="-977.00892857142856"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="xgh-qL-7wh">
-            <objects>
-                <viewController storyboardIdentifier="NewsViewController" id="X5b-sS-tHr" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1KL-Lj-M1y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="290" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TBi-XJ-Ofz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="EFg-rt-KpM" firstAttribute="bottom" secondItem="TBi-XJ-Ofz" secondAttribute="bottom" constant="-11" id="0jR-n7-lcN"/>
-                            <constraint firstItem="EFg-rt-KpM" firstAttribute="trailing" secondItem="TBi-XJ-Ofz" secondAttribute="trailing" id="2Hb-qo-J1f"/>
-                            <constraint firstItem="TBi-XJ-Ofz" firstAttribute="leading" secondItem="EFg-rt-KpM" secondAttribute="leading" id="Idq-4r-V29"/>
-                            <constraint firstItem="TBi-XJ-Ofz" firstAttribute="top" secondItem="EFg-rt-KpM" secondAttribute="top" id="Oa3-e5-5ML"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="EFg-rt-KpM"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rzP-M3-Scj"/>
-                    <connections>
-                        <outlet property="tableview" destination="TBi-XJ-Ofz" id="M4I-Bv-y2L"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhy-Vg-vWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="-423.21428571428572"/>
+            <point key="canvasLocation" x="6826.0869565217399" y="-977.00892857142856"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="b8y-jG-JMq">
@@ -491,12 +460,44 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="X5b-sS-tHr" kind="relationship" relationship="viewControllers" id="0y5-vf-dxt"/>
+                        <segue destination="chi-lA-kps" kind="relationship" relationship="viewControllers" id="rJG-vG-yRG"/>
+                        <segue destination="M1A-mU-myh" kind="relationship" relationship="viewControllers" id="ywq-vM-p4P"/>
+                        <segue destination="yAu-qa-kBt" kind="relationship" relationship="viewControllers" id="CHE-fs-l4u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGc-w5-mXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1276.8115942028987" y="-423.21428571428572"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="yxM-g0-yRC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" id="yAu-qa-kBt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7bI-31-1n1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hy-ek-xsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="-610"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="23g-4h-Rm5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorite" id="M1A-mU-myh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YgP-aM-drA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFh-L3-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2161" y="-525"/>
+        </scene>
+        <!--NewsViewController-->
+        <scene sceneID="xet-Vh-R65">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NewsViewController" storyboardName="Home" referencedIdentifier="NewsViewController" id="chi-lA-kps" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="clG-sj-YdO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-a1-MpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186.9565217391305" y="-423.21428571428572"/>
         </scene>
     </scenes>
     <resources>
