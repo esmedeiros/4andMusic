@@ -19,6 +19,7 @@
 		8E0D8C1F2306588A00E5DCE7 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C1E2306588A00E5DCE7 /* MusicAPI.swift */; };
 		8E0D8C2123065DED00E5DCE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C2023065DED00E5DCE7 /* ViewController.swift */; };
 		8E0D8C23230664C700E5DCE7 /* MusicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C22230664C700E5DCE7 /* MusicRequest.swift */; };
+		8E0F3D85230C311A00181D0B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F3D84230C311A00181D0B /* DetailsViewController.swift */; };
 		8E0FBC2223076BA500E4D31B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FBC2123076BA500E4D31B /* News.swift */; };
 		8E0FBC2523076D8A00E4D31B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FBC2323076D8A00E4D31B /* NewsCell.swift */; };
 		8E0FBC2623076D8A00E4D31B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E0FBC2423076D8A00E4D31B /* NewsCell.xib */; };
@@ -53,6 +54,7 @@
 		8E0D8C1E2306588A00E5DCE7 /* MusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
 		8E0D8C2023065DED00E5DCE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E0D8C22230664C700E5DCE7 /* MusicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRequest.swift; sourceTree = "<group>"; };
+		8E0F3D84230C311A00181D0B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8E0FBC2123076BA500E4D31B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8E0FBC2323076D8A00E4D31B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8E0FBC2423076D8A00E4D31B /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
@@ -193,10 +195,11 @@
 				8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */,
 				8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */,
 				8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */,
-				8E900D1A2303CBA8000A297A /* LoaderViewController.swift */,
 				8E36EB2622FB4E860091E885 /* AlertController.swift */,
+				8E900D1A2303CBA8000A297A /* LoaderViewController.swift */,
 				8E0D8C2023065DED00E5DCE7 /* ViewController.swift */,
 				8E0FBC2723076FB700E4D31B /* NewsViewController.swift */,
+				8E0F3D84230C311A00181D0B /* DetailsViewController.swift */,
 				8E36EB1222FB2CB80091E885 /* Main.storyboard */,
 				8E36EB1A22FB2CBA0091E885 /* Info.plist */,
 				8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */,
@@ -335,6 +338,7 @@
 				8E36EB1122FB2CB80091E885 /* SignUpViewController.swift in Sources */,
 				8E0D576F22FCE42100160B42 /* StoreAuth.swift in Sources */,
 				8E36EB2722FB4E860091E885 /* AlertController.swift in Sources */,
+				8E0F3D85230C311A00181D0B /* DetailsViewController.swift in Sources */,
 				8E0FBC2823076FB700E4D31B /* NewsViewController.swift in Sources */,
 				8E080D26230221D400DE2F51 /* ResetPasswordViewController.swift in Sources */,
 				8E0FBC2A2307713700E4D31B /* NewsAPI.swift in Sources */,

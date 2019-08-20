@@ -10,6 +10,7 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
+    var selected:Int = 0
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -44,6 +45,23 @@ class NewsViewController: UIViewController {
             }
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        selected = indexPath.row
+        
+        self.performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+ 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+
+            let news: News = arrayNews[selected]
+            destination.newsURL = news.url
+        }
     }
     
     
