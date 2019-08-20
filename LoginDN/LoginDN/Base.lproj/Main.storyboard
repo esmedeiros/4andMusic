@@ -284,7 +284,7 @@
                         <outlet property="loading" destination="zkq-ZW-dNP" id="Ecm-qx-EUK"/>
                         <outlet property="logginFBButton" destination="XfB-3z-doy" id="oDc-D2-4fa"/>
                         <outlet property="passwordTF" destination="OWE-lv-KW1" id="w0z-8K-RXV"/>
-                        <segue destination="otE-Xm-SXg" kind="show" identifier="signInSegue" id="ErS-To-SMD"/>
+                        <segue destination="1nE-Io-VfX" kind="show" identifier="signInSegue" id="B44-eo-4Tv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Amf-r6-hvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,54 +450,37 @@
             </objects>
             <point key="canvasLocation" x="141" y="430"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="a3H-E2-DrO">
+        <!--News View Controller-->
+        <scene sceneID="IIZ-qD-Gc8">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="otE-Xm-SXg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lM1-R4-m6Y">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
+                <viewController storyboardIdentifier="NewsViewController" id="1nE-Io-VfX" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bgd-Vp-4AY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="290" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-vc-Scq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H2o-vc-Scq" firstAttribute="leading" secondItem="hF9-Dm-Vcy" secondAttribute="leading" id="J2n-LD-gu4"/>
+                            <constraint firstItem="H2o-vc-Scq" firstAttribute="top" secondItem="hF9-Dm-Vcy" secondAttribute="top" id="ebk-UF-EyW"/>
+                            <constraint firstItem="hF9-Dm-Vcy" firstAttribute="bottom" secondItem="H2o-vc-Scq" secondAttribute="bottom" constant="-11" id="oWS-Mx-89Y"/>
+                            <constraint firstItem="hF9-Dm-Vcy" firstAttribute="trailing" secondItem="H2o-vc-Scq" secondAttribute="trailing" id="vRt-xz-NCv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hF9-Dm-Vcy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="I1l-Zf-MD9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="chi-lA-kps" kind="relationship" relationship="viewControllers" id="rJG-vG-yRG"/>
-                        <segue destination="M1A-mU-myh" kind="relationship" relationship="viewControllers" id="ywq-vM-p4P"/>
-                        <segue destination="yAu-qa-kBt" kind="relationship" relationship="viewControllers" id="CHE-fs-l4u"/>
+                        <outlet property="tableview" destination="H2o-vc-Scq" id="Czc-BS-ZVN"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TGc-w5-mXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Vg-l3-ZbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276.8115942028987" y="-423.21428571428572"/>
-        </scene>
-        <!--User-->
-        <scene sceneID="yxM-g0-yRC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="User" id="yAu-qa-kBt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7bI-31-1n1"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hy-ek-xsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2026" y="-610"/>
-        </scene>
-        <!--Favorite-->
-        <scene sceneID="23g-4h-Rm5">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Favorite" id="M1A-mU-myh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YgP-aM-drA"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lFh-L3-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2161" y="-525"/>
-        </scene>
-        <!--NewsViewController-->
-        <scene sceneID="xet-Vh-R65">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NewsViewController" storyboardName="Home" referencedIdentifier="NewsViewController" id="chi-lA-kps" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="clG-sj-YdO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-a1-MpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="-423.21428571428572"/>
+            <point key="canvasLocation" x="1239" y="-423"/>
         </scene>
     </scenes>
     <resources>

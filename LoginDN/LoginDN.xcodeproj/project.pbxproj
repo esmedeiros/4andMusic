@@ -72,9 +72,6 @@
 		8E900D182303CB5C000A297A /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		8E900D1A2303CBA8000A297A /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		8E900D1C230600C1000A297A /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
-		ACE7B8BE230B6F5A009C67D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ../Home.storyboard; sourceTree = "<group>"; };
-		ACE7B8BF230B7341009C67D3 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Favorite.storyboard; path = Base.lproj/Favorite.storyboard; sourceTree = "<group>"; };
-		ACE7B8C0230B7541009C67D3 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = User.storyboard; path = ../User.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,9 +198,6 @@
 				8E0D8C2023065DED00E5DCE7 /* ViewController.swift */,
 				8E0FBC2723076FB700E4D31B /* NewsViewController.swift */,
 				8E36EB1222FB2CB80091E885 /* Main.storyboard */,
-				ACE7B8BE230B6F5A009C67D3 /* Home.storyboard */,
-				ACE7B8BF230B7341009C67D3 /* Favorite.storyboard */,
-				ACE7B8C0230B7541009C67D3 /* User.storyboard */,
 				8E36EB1A22FB2CBA0091E885 /* Info.plist */,
 				8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */,
 				8E0D8C1B2306531800E5DCE7 /* Cell */,
