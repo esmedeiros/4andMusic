@@ -25,12 +25,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fww-68-Wf8" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="122" width="374" height="37"/>
+                                <rect key="frame" x="20" y="122" width="374" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="oLE-qg-P7P"/>
+                                    <constraint firstAttribute="height" constant="43" id="oLE-qg-P7P"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -39,12 +39,12 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQS-Yj-J7t" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="209" width="374" height="37"/>
+                                <rect key="frame" x="20" y="215" width="374" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="pyQ-ae-lYZ"/>
+                                    <constraint firstAttribute="height" constant="43" id="pyQ-ae-lYZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -53,7 +53,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgH-TU-pBo">
-                                <rect key="frame" x="40" y="357" width="334" height="33"/>
+                                <rect key="frame" x="40" y="375" width="334" height="33"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exj-Ge-bIb">
-                                <rect key="frame" x="40" y="423" width="334" height="33"/>
+                                <rect key="frame" x="40" y="441" width="334" height="33"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.38823529410000002" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,12 +85,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-dG-z8V" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="296" width="374" height="37"/>
+                                <rect key="frame" x="20" y="308" width="374" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="eP1-TE-Ynv"/>
+                                    <constraint firstAttribute="height" constant="43" id="eP1-TE-Ynv"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -411,13 +411,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imq-72-hvU" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="238" width="374" height="37"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e-mail:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imq-72-hvU" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="238" width="374" height="43"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="Zuh-AY-eZX"/>
+                                    <constraint firstAttribute="height" constant="43" id="Zuh-AY-eZX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -432,7 +432,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3M-n3-8ye">
-                                <rect key="frame" x="20" y="401" width="374" height="33"/>
+                                <rect key="frame" x="20" y="407" width="374" height="33"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -449,7 +449,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOT-Pn-Jb4">
-                                <rect key="frame" x="20" y="335" width="374" height="33"/>
+                                <rect key="frame" x="20" y="341" width="374" height="33"/>
                                 <color key="backgroundColor" red="0.79607843137254897" green="0.38823529411764707" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
