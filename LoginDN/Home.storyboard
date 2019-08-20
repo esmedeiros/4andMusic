@@ -12,7 +12,7 @@
         <!--News View Controller-->
         <scene sceneID="xgh-qL-7wh">
             <objects>
-                <viewController storyboardIdentifier="NewsViewController" id="X5b-sS-tHr" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X5b-sS-tHr" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1KL-Lj-M1y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

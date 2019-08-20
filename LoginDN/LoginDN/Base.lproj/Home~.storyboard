@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LEv-pR-4i7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajW-e9-Qlu">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -456,51 +456,52 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="otE-Xm-SXg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lM1-R4-m6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="chi-lA-kps" kind="relationship" relationship="viewControllers" id="rJG-vG-yRG"/>
-                        <segue destination="M1A-mU-myh" kind="relationship" relationship="viewControllers" id="ywq-vM-p4P"/>
-                        <segue destination="yAu-qa-kBt" kind="relationship" relationship="viewControllers" id="CHE-fs-l4u"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGc-w5-mXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1276.8115942028987" y="-423.21428571428572"/>
         </scene>
-        <!--User-->
-        <scene sceneID="yxM-g0-yRC">
+        <!--News View Controller-->
+        <scene sceneID="Ss2-QA-tUY">
             <objects>
-                <viewControllerPlaceholder storyboardName="User" id="yAu-qa-kBt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7bI-31-1n1"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hy-ek-xsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ajW-e9-Qlu" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H6K-6v-6sG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="290" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-Uv-BGR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c47-Tv-35Q" firstAttribute="bottom" secondItem="Ea0-Uv-BGR" secondAttribute="bottom" constant="-11" id="6Yj-hS-3S2"/>
+                            <constraint firstItem="Ea0-Uv-BGR" firstAttribute="top" secondItem="c47-Tv-35Q" secondAttribute="top" id="7AN-pK-ZKd"/>
+                            <constraint firstItem="Ea0-Uv-BGR" firstAttribute="leading" secondItem="c47-Tv-35Q" secondAttribute="leading" id="APy-oL-tuw"/>
+                            <constraint firstItem="c47-Tv-35Q" firstAttribute="trailing" secondItem="Ea0-Uv-BGR" secondAttribute="trailing" id="Keg-eO-Ic6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c47-Tv-35Q"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="YTd-td-LF6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableview" destination="Ea0-Uv-BGR" id="0Fx-Qf-Qad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIw-j9-ADn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="-610"/>
-        </scene>
-        <!--Favorite-->
-        <scene sceneID="23g-4h-Rm5">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Favorite" id="M1A-mU-myh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YgP-aM-drA"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lFh-L3-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2161" y="-525"/>
-        </scene>
-        <!--NewsViewController-->
-        <scene sceneID="xet-Vh-R65">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NewsViewController" storyboardName="Home" referencedIdentifier="NewsViewController" id="chi-lA-kps" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="clG-sj-YdO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-a1-MpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="-423.21428571428572"/>
+            <point key="canvasLocation" x="2720" y="-423"/>
         </scene>
     </scenes>
     <resources>
         <image name="4musica_02" width="2238" height="1567"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2CR-2x-TwY"/>
+    </inferredMetricsTieBreakers>
 </document>
