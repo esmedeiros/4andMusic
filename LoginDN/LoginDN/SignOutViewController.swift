@@ -11,7 +11,7 @@ import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class SignOutViewController: UIViewController {
+class SignOutViewController: BaseViewController {
 
     @IBOutlet weak var userNameTextField: UILabel!
     
@@ -37,6 +37,7 @@ class SignOutViewController: UIViewController {
             let loginManager = LoginManager()
             loginManager.logOut()
             self.dismiss(animated: true, completion: nil)
+            print("button acionado")
 //            performSegue(withIdentifier: "signOutSegue", sender: nil)
         }catch{
             print(error)

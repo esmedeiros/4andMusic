@@ -65,7 +65,6 @@ class NewsViewController: UIViewController {
         self.performSegue(withIdentifier: "detailSegue", sender: nil)
     }
  
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
 
@@ -73,12 +72,6 @@ class NewsViewController: UIViewController {
             destination.newsURL = news.url
         }
     }
-    
-    
-    
-    
-    
-    
 }
 
 extension NewsViewController: UITableViewDataSource{
@@ -106,11 +99,6 @@ extension NewsViewController: UITableViewDataSource{
         return arrayNews.count
     }
     
-    
-    
-   
-    
-    
 }
 
 extension NewsViewController: UITableViewDelegate{
@@ -135,14 +123,7 @@ extension NewsViewController: UITableViewDelegate{
     }
     
     func scheduleNotificarion(){
-        
-        
-        
-        
     }
-    
-    
-    
     
 }
 

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ResetPasswordViewController: UIViewController {
+class ResetPasswordViewController: BaseViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var buttonReset: UIButton!
@@ -29,11 +29,15 @@ class ResetPasswordViewController: UIViewController {
     
     
     func resetPassword(email: String, OnSucess: @escaping() -> Void, onError: @escaping(_ erroMessage: String) -> Void){
+        self.showLoadingAnimation()
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            
             if error == nil{
                 AlertController.showAlert(self, title: "Congratulations!!!", message: "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password")
+            self.hiddenLoadingAnimation()
             }else{
                 AlertController.showAlert(self, title: "Attention!!!", message: "Please enter an email valid")
+            self.hiddenLoadingAnimation()
             }
         }
         
