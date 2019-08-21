@@ -15,7 +15,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let notification = NotificationCenter()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,9 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+     
 
 
+        
 //        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 //
 //

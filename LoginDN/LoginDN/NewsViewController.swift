@@ -15,8 +15,8 @@ class NewsViewController: UIViewController {
     var selected:Int = 0
     let notificationCenter = UNUserNotificationCenter.current()
     
-    
     @IBOutlet weak var tableview: UITableView!
+    
     
     var arrayNews: [News] = []{
         didSet{
@@ -75,6 +75,10 @@ class NewsViewController: UIViewController {
     }
     
     
+    
+    
+    
+    
 }
 
 extension NewsViewController: UITableViewDataSource{
@@ -103,6 +107,10 @@ extension NewsViewController: UITableViewDataSource{
     }
     
     
+    
+   
+    
+    
 }
 
 extension NewsViewController: UITableViewDelegate{
@@ -118,6 +126,21 @@ extension NewsViewController: UITableViewDelegate{
 
         return swipeAction
     }
+    
+    func notificarion(){
+        
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (bool, error) in
+            
+        }
+    }
+    
+    func scheduleNotificarion(){
+        
+        
+        
+        
+    }
+    
     
     
     
