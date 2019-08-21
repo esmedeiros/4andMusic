@@ -14,7 +14,7 @@ target 'LoginDN' do
   pod 'FBSDKLoginKit'
  
   pod 'TextFieldEffects'
-  pod 'lottie-ios'
+  pod 'FSnapChatLoading'
   
   pod 'Alamofire'
   pod 'SDWebImage'

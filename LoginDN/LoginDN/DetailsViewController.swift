@@ -31,6 +31,9 @@ class DetailsViewController: UIViewController, WKNavigationDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     override func loadView() {
         detailsWebKit = WKWebView()

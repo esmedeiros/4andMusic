@@ -38,6 +38,7 @@ PODS:
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.0)
     - leveldb-library (~> 1.18)
+  - FSnapChatLoading (1.0.5)
   - GoogleDataTransport (1.0.0)
   - GoogleDataTransportCCTSupport (1.0.0):
     - GoogleDataTransport (~> 1.0)
@@ -58,7 +59,6 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
   - leveldb-library (1.20)
-  - lottie-ios (3.1.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -74,7 +74,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Database
-  - lottie-ios
+  - FSnapChatLoading
   - SDWebImage
   - TextFieldEffects
 
@@ -90,12 +90,12 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseDatabase
+    - FSnapChatLoading
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
-    - lottie-ios
     - nanopb
     - SDWebImage
     - TextFieldEffects
@@ -111,16 +111,16 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 5807d8a32ea4455d6476da6de828675f89a8d8f3
   FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
   FirebaseDatabase: f48e067716864be2b855cf716b927ef375d6cfa0
+  FSnapChatLoading: c06f4e0a4a4ec1eba8f2fef46f8c1653cc79b2ef
   GoogleDataTransport: fe6af28a312ae5a56d5cec00ff14f6e3ded3beef
   GoogleDataTransportCCTSupport: e6fa721757b147d7f1481d7367b8dab3e9010889
   GoogleUtilities: 64b5e3982b1b01bda26712affd5c523ef32563cf
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 8ad9ddac25bf7122c9e793466be1797f0c59c84c
+PODFILE CHECKSUM: 94c7211241979e5243bae475cec7d7d62daeccf4
 
 COCOAPODS: 1.7.4

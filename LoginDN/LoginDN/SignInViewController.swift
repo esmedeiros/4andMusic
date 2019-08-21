@@ -11,7 +11,7 @@ import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: BaseViewController {
 
     @IBOutlet weak var logginFBButton: FBLoginButton!
     @IBOutlet weak var emailTF: UITextField!
@@ -24,7 +24,9 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        self.emailTF.text = "euclides.sena@hotmail.com"
+        self.passwordTF.text = "12345678"
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
@@ -56,10 +58,9 @@ class SignInViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        emailTF.text = ""
-        passwordTF.text = ""
-        self.loading.isHidden = true
-        self.loading.stopAnimating()
+//        emailTF.text = ""
+//        passwordTF.text = ""
+     
     }
     
     func performSignIn(){
@@ -72,14 +73,12 @@ class SignInViewController: UIViewController {
                 return
                 
         }
-        loading.isHidden = false
-        loading.startAnimating()
+        self.showLoadingAnimation()
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             guard error == nil else{
                 AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                self.loading.isHidden = true
-                self.loading.stopAnimating()
+               self.hiddenLoadingAnimation()
                 return
             }
             self.performSegue(withIdentifier: "signInSegue", sender: nil)
@@ -87,6 +86,8 @@ class SignInViewController: UIViewController {
         
     }
     @IBAction func singInTapped(_ sender: Any) {
+        
+        
         performSignIn()
         view.frame.origin.y = 0
     }
@@ -94,22 +95,28 @@ class SignInViewController: UIViewController {
 
 
 extension SignInViewController: LoginButtonDelegate {
+
+    
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        
+        print("loginButtonDidLogOut")
     }
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        
+        
         guard let curr = AccessToken.current else {return}
         let credential = FacebookAuthProvider.credential(withAccessToken: curr.tokenString)
+        
         print("------------------------------------ \(credential) ")
+        self.showLoadingAnimation()
         Auth.auth().signIn(with: credential) { (authResult, error) in
             if let error = error {
                 print(error)
+                self.hiddenLoadingAnimation()
                 return
             } else {
                 print("------ Usuário autenticado com sucesso!!!!")
-                self.loading.isHidden = true
-                self.loading.stopAnimating()
+                self.showLoadingAnimation()
                 
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
             }
