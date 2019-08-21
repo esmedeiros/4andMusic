@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import UserNotifications
+import UserNotificationsUI
 
 class NewsViewController: UIViewController {
     
     var selected:Int = 0
+    let notificationCenter = UNUserNotificationCenter.current()
+    
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -102,6 +106,19 @@ extension NewsViewController: UITableViewDataSource{
 }
 
 extension NewsViewController: UITableViewDelegate{
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let swipe = UIContextualAction(style: .normal, title: "Favorite") { (action, view, boolValue) in
+            print("swipe apareceu")
+            
+            
+        }
+        let swipeAction = UISwipeActionsConfiguration(actions: [swipe])
+
+        return swipeAction
+    }
+    
     
     
 }
