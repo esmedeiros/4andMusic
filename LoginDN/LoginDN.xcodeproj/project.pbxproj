@@ -34,8 +34,7 @@
 		8E36EB2322FB41BC0091E885 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */; };
 		8E36EB2522FB444B0091E885 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */; };
 		8E36EB2722FB4E860091E885 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36EB2622FB4E860091E885 /* AlertController.swift */; };
-		8E900D192303CB5C000A297A /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E900D182303CB5C000A297A /* loader.json */; };
-		8E900D1B2303CBA8000A297A /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E900D1A2303CBA8000A297A /* LoaderViewController.swift */; };
+		8E51E403230CB96D009AA827 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E51E402230CB96D009AA827 /* BaseViewController.swift */; };
 		8E900D1D230600C1000A297A /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E900D1C230600C1000A297A /* Music.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +70,7 @@
 		8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E36EB2622FB4E860091E885 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		8E900D182303CB5C000A297A /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
-		8E900D1A2303CBA8000A297A /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		8E51E402230CB96D009AA827 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8E900D1C230600C1000A297A /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,13 +188,12 @@
 				8E0D8C1D2306586A00E5DCE7 /* Controller */,
 				8E0D576822FCE3D500160B42 /* Network */,
 				8E36EB0E22FB2CB80091E885 /* AppDelegate.swift */,
-				8E900D182303CB5C000A297A /* loader.json */,
+				8E51E402230CB96D009AA827 /* BaseViewController.swift */,
 				8E36EB2022FB41AA0091E885 /* SignInViewController.swift */,
 				8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */,
 				8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */,
 				8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */,
 				8E36EB2622FB4E860091E885 /* AlertController.swift */,
-				8E900D1A2303CBA8000A297A /* LoaderViewController.swift */,
 				8E0D8C2023065DED00E5DCE7 /* ViewController.swift */,
 				8E0FBC2723076FB700E4D31B /* NewsViewController.swift */,
 				8E0F3D84230C311A00181D0B /* DetailsViewController.swift */,
@@ -281,7 +278,6 @@
 				8E36EB2522FB444B0091E885 /* GoogleService-Info.plist in Resources */,
 				8E36EB1622FB2CBA0091E885 /* Assets.xcassets in Resources */,
 				8E36EB1422FB2CB80091E885 /* Main.storyboard in Resources */,
-				8E900D192303CB5C000A297A /* loader.json in Resources */,
 				8E0FBC2623076D8A00E4D31B /* NewsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +336,7 @@
 				8E36EB2722FB4E860091E885 /* AlertController.swift in Sources */,
 				8E0F3D85230C311A00181D0B /* DetailsViewController.swift in Sources */,
 				8E0FBC2823076FB700E4D31B /* NewsViewController.swift in Sources */,
+				8E51E403230CB96D009AA827 /* BaseViewController.swift in Sources */,
 				8E080D26230221D400DE2F51 /* ResetPasswordViewController.swift in Sources */,
 				8E0FBC2A2307713700E4D31B /* NewsAPI.swift in Sources */,
 				8E0D8C19230652F300E5DCE7 /* CellMusic.swift in Sources */,
@@ -347,7 +344,6 @@
 				8E36EB2322FB41BC0091E885 /* SignOutViewController.swift in Sources */,
 				8E0FBC2523076D8A00E4D31B /* NewsCell.swift in Sources */,
 				8E0D577422FCE71700160B42 /* User.swift in Sources */,
-				8E900D1B2303CBA8000A297A /* LoaderViewController.swift in Sources */,
 				8E36EB2122FB41AA0091E885 /* SignInViewController.swift in Sources */,
 				8E0D576A22FCE3FC00160B42 /* GenericStore.swift in Sources */,
 				8E0D577622FCE71D00160B42 /* AuthUser.swift in Sources */,
