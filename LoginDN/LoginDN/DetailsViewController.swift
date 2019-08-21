@@ -25,9 +25,6 @@ class DetailsViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: newsURL ?? "")!
         detailsWebKit.load(URLRequest(url: url))
         
-//        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: detailsWebKit, action: #selector(detailsWebKit.reload))
-//        toolbarItems = [refresh]
-//        navigationController?.isToolbarHidden = false
         
     }
     
@@ -35,7 +32,7 @@ class DetailsViewController: UIViewController, WKNavigationDelegate {
         self.dismiss(animated: true, completion: nil)
     }
 
-
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = detailsWebKit.title
     }

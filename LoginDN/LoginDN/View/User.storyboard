@@ -10,22 +10,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Out View Controller-->
         <scene sceneID="Ijr-ss-NW5">
             <objects>
-                <viewController id="Nhj-eJ-J2F" sceneMemberID="viewController">
+                <viewController id="Nhj-eJ-J2F" customClass="SignOutViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wo-MF-Y16">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8Q-8d-eXh">
+                                <rect key="frame" x="20" y="243" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="SignOut"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="Nhj-eJ-J2F" eventType="touchUpInside" id="Lpt-ca-g9Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIB-af-fZy">
+                                <rect key="frame" x="20" y="94" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DIJ-AF-Ou8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pEK-fZ-e65" firstAttribute="trailing" secondItem="k8Q-8d-eXh" secondAttribute="trailing" constant="20" id="5y7-4x-1mY"/>
+                            <constraint firstItem="pEK-fZ-e65" firstAttribute="bottom" secondItem="k8Q-8d-eXh" secondAttribute="bottom" constant="540" id="GAk-kr-YDN"/>
+                            <constraint firstItem="k8Q-8d-eXh" firstAttribute="leading" secondItem="pEK-fZ-e65" secondAttribute="leading" constant="20" id="cJ2-Gd-7In"/>
+                            <constraint firstItem="GIB-af-fZy" firstAttribute="leading" secondItem="pEK-fZ-e65" secondAttribute="leading" constant="20" id="kaB-43-t8y"/>
+                            <constraint firstItem="k8Q-8d-eXh" firstAttribute="top" secondItem="pEK-fZ-e65" secondAttribute="top" constant="199" id="r8J-0s-U93"/>
+                            <constraint firstItem="GIB-af-fZy" firstAttribute="top" secondItem="pEK-fZ-e65" secondAttribute="top" constant="50" id="rfC-Da-9IU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pEK-fZ-e65"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="Rpa-N8-2ey"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userNameTextField" destination="GIB-af-fZy" id="TOI-As-W55"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9N-fw-Fwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="108"/>
+            <point key="canvasLocation" x="82.608695652173921" y="107.8125"/>
         </scene>
     </scenes>
 </document>

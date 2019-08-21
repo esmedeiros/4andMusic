@@ -65,7 +65,6 @@ class NewsViewController: UIViewController {
         self.performSegue(withIdentifier: "detailSegue", sender: nil)
     }
  
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
 
@@ -73,12 +72,6 @@ class NewsViewController: UIViewController {
             destination.newsURL = news.url
         }
     }
-    
-    
-    
-    
-    
-    
 }
 
 extension NewsViewController: UITableViewDataSource{
@@ -106,64 +99,31 @@ extension NewsViewController: UITableViewDataSource{
         return arrayNews.count
     }
     
-    
-    
-   
-    
-    
 }
 
 extension NewsViewController: UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let notification = swipeAction(index: indexPath)
-        
-        return UISwipeActionsConfiguration(actions: [notification])
-    
-    }
-    
-    func swipeAction(index: IndexPath) -> UIContextualAction{
-        let arraynews = self.arrayNews[index.row]
-        let action = UIContextualAction(style: .normal, title: "Favorite") { (action, view, completion) in
+        let swipe = UIContextualAction(style: .normal, title: "Favorite") { (action, view, boolValue) in
+            print("swipe apareceu")
             
             
-            
-            
-            completion(true)
-            
-          //  action.image =
-        
-            print("clicou na linha \(index.row)")
         }
-        
-    
-     return action
+        let swipeAction = UISwipeActionsConfiguration(actions: [swipe])
+
+        return swipeAction
     }
     
-    
-    
-    func notification(){
+    func notificarion(){
         
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (bool, error) in
-            if error != nil{
-                print("Usuario nao autorizou a notificação")
-            } else{
-                print("Usuario autorizou a notificacao")
-            }
+            
         }
     }
     
-    func scheduleNotification(){
-        
-        
-        
-        
+    func scheduleNotificarion(){
     }
-    
-    
-    
     
 }
 

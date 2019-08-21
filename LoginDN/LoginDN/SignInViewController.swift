@@ -34,8 +34,7 @@ class SignInViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification , object: nil)
      
         
-        loading.isHidden = true
-        loading.stopAnimating()
+        self.hiddenLoadingAnimation()
         emailTF.delegate = self
         passwordTF.delegate = self
         logginFBButton.delegate = self

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,8 +21,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         configureTextFields()
         
-        loading.isHidden = true
-        loading.stopAnimating()
+        self.hiddenLoadingAnimation()
     }
 
     private func configureTextFields(){
@@ -34,8 +33,7 @@ class SignUpViewController: UIViewController {
     
     func performSignUp(){
         
-        loading.isHidden = false
-        loading.startAnimating()
+        self.showLoadingAnimation()
         
         guard let username = userNameTextField.text,
             username != "",
@@ -45,8 +43,7 @@ class SignUpViewController: UIViewController {
             password != ""
             else {
                 AlertController.showAlert(self, title: "Missing Info", message: "Please fill out all fields")
-                self.loading.isHidden = true
-                self.loading.stopAnimating()
+                self.hiddenLoadingAnimation()
                 return
         }
         
@@ -67,8 +64,7 @@ class SignUpViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard error == nil else{
                 AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                self.loading.isHidden = true
-                self.loading.stopAnimating()
+                self.hiddenLoadingAnimation()
                 return
         }
             //print(Auth.auth().currentUser?.displayName)

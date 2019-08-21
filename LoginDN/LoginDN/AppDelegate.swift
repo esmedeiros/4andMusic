@@ -23,26 +23,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-
-
-
-
-        if Auth.auth().currentUser == nil{
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-
-            let viewControllerLogIn = storyBoard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-            self.window?.rootViewController = viewControllerLogIn
-        }else{
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-
-            let viewControllerNews = storyBoard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
-            let nav = UINavigationController(rootViewController: viewControllerNews)
-
-            self.window?.rootViewController = nav
-
-        }
-        self.window?.makeKeyAndVisible()
+//        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+//
+//
+//
+//
+//        if Auth.auth().currentUser == nil{
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            let viewControllerLogIn = storyBoard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+//            self.window?.rootViewController = viewControllerLogIn
+//        }else{
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            let viewControllerNews = storyBoard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+//            let nav = UINavigationController(rootViewController: viewControllerNews)
+//
+//            self.window?.rootViewController = nav
+//
+//        }
+//        self.window?.makeKeyAndVisible()
 
         return true
         
