@@ -13,7 +13,7 @@ class NewsCell: UITableViewCell {
 
     @IBOutlet weak var topoNewsIV: UIImageView!
     @IBOutlet weak var headlineNewsLb: UILabel!
-    @IBOutlet weak var urlNewsLb: UILabel!
+
     @IBOutlet weak var insertedNewsLb: UILabel!
     @IBOutlet weak var featuredLb: UILabel!
     
@@ -21,9 +21,12 @@ class NewsCell: UITableViewCell {
         
         topoNewsIV.sd_setImage(with:URL(string: "https://www.vagalume.com.br/\(news.picSrc)"), completed: nil)
         headlineNewsLb.text = news.headline
-        urlNewsLb.text = news.url
+
         insertedNewsLb.text = news.inserted
         featuredLb.text = news.featured
+        self.featuredLb.layer.borderWidth = 1.0
+        
+        self.featuredLb.layer.borderColor = UIColor.white.cgColor
         
     }
     

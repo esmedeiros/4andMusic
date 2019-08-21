@@ -25,22 +25,17 @@ class DetailsViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: newsURL ?? "")!
         detailsWebKit.load(URLRequest(url: url))
         
-        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: detailsWebKit, action: #selector(detailsWebKit.reload))
-        toolbarItems = [refresh]
-        navigationController?.isToolbarHidden = false
+//        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: detailsWebKit, action: #selector(detailsWebKit.reload))
+//        toolbarItems = [refresh]
+//        navigationController?.isToolbarHidden = false
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    @IBAction func tappedBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 
-    override func loadView() {
-        detailsWebKit = WKWebView()
-        detailsWebKit.navigationDelegate = self
-        view = detailsWebKit
-    }
-    
+
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = detailsWebKit.title
     }
