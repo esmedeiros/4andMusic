@@ -117,24 +117,45 @@ extension NewsViewController: UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let swipe = UIContextualAction(style: .normal, title: "Favorite") { (action, view, boolValue) in
-            print("swipe apareceu")
-            
-            
-        }
-        let swipeAction = UISwipeActionsConfiguration(actions: [swipe])
-
-        return swipeAction
+        
+        let notification = swipeAction(index: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [notification])
+    
     }
     
-    func notificarion(){
+    func swipeAction(index: IndexPath) -> UIContextualAction{
+        let arraynews = self.arrayNews[index.row]
+        let action = UIContextualAction(style: .normal, title: "Favorite") { (action, view, completion) in
+            
+            
+            
+            
+            completion(true)
+            
+          //  action.image =
+        
+            print("clicou na linha \(index.row)")
+        }
+        
+    
+     return action
+    }
+    
+    
+    
+    func notification(){
         
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (bool, error) in
-            
+            if error != nil{
+                print("Usuario nao autorizou a notificação")
+            } else{
+                print("Usuario autorizou a notificacao")
+            }
         }
     }
     
-    func scheduleNotificarion(){
+    func scheduleNotification(){
         
         
         
