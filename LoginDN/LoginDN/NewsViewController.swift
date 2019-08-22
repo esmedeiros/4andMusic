@@ -25,7 +25,7 @@ class NewsViewController: UIViewController {
     }
     
     var getMusicHotSpot: NewsAPI = NewsAPI()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +33,7 @@ class NewsViewController: UIViewController {
         tableview.dataSource = self
         
         tableview.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: "cellNews")
+        
         
         getMusicHotSpot.getNews { (news, erro) in
             if erro != nil{

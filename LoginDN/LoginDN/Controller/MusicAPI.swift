@@ -24,9 +24,15 @@ class MusicAPI{
                     return
                 }
                 
-                let resultJSON = try? JSONDecoder().decode(MusicRequest.self, from: dataJSON)
-               
-                resultRequest(resultJSON?.hotspots,nil)
+                do {
+                    let resultJSON = try? JSONDecoder().decode(MusicRequest.self, from: dataJSON)
+                    
+                    resultRequest(resultJSON?.hotspots,nil)
+                }catch {
+                    resultRequest(nil,NSError())
+                }
+
+                
                 
             }else {
                 print(response.response?.statusCode)

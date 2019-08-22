@@ -31,15 +31,13 @@ class ViewController: UIViewController {
         
         getMusicHotSpot.getMusic { (music, erro) in
             if erro != nil{
-                
+                print("Deu Erro ao carregar o filme \(erro)")
+            }else{
                 if let array = music{
-                    
                     self.arrayMusic = array
                     self.musicTableView.reloadData()
                 }
-                
-                print("Deu Erro ao carregar o filme \(erro)")
-            }else{
+
                 print("Show de bola!!! \(music)")
                 
                 //self.arrayMusic = music?.results ?? []

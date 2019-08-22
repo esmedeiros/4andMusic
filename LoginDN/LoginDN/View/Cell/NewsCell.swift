@@ -22,7 +22,7 @@ class NewsCell: UITableViewCell {
         topoNewsIV.sd_setImage(with:URL(string: "https://www.vagalume.com.br/\(news.picSrc)"), completed: nil)
         headlineNewsLb.text = news.headline
 
-        insertedNewsLb.text = news.inserted
+        insertedNewsLb.text = ("Última Atualização: \(news.inserted)")
         featuredLb.text = news.featured
         self.featuredLb.layer.borderWidth = 1.0
         

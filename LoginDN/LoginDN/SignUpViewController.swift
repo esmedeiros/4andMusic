@@ -47,28 +47,15 @@ class SignUpViewController: BaseViewController {
                 return
         }
         
-        
-//        let ref = Database.database().reference()
-//
-//        let postObject = ["username": userNameTextField.text ?? "",
-//                          "email": emailTextField.text ?? ""]
-//
-//        ref.child("user/profile").child(userNameTextField.text ?? "").setValue(postObject) { (erro, ref) in
-//            if erro == nil{
-//                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
-//            }else{
-//                print("Deu ruim")
-//            }
-//        }
-        
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard error == nil else{
                 AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
                 self.hiddenLoadingAnimation()
                 return
         }
-            //print(Auth.auth().currentUser?.displayName)
+            UserDefaults.standard.set(username, forKey: "username")
             self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+            
         }
     }
     
