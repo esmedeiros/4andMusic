@@ -16,6 +16,8 @@ class NewsViewController: UIViewController {
     var selected:Int = 0
     var indexIdentifier: Int = 0
     var notificationCenter = UNUserNotificationCenter.current()
+    let colors = Colors()
+    
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -107,6 +109,15 @@ extension NewsViewController: UITableViewDataSource{
 
 extension NewsViewController: UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let swipe = rightSwipeIndex(index: indexPath)
+
+        let swipeAction = UISwipeActionsConfiguration(actions: [swipe])
+        
+        return swipeAction
+
+    }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -117,19 +128,35 @@ extension NewsViewController: UITableViewDelegate{
         return swipeAction
     }
     
-    
-    func swipeIndex(index: IndexPath) -> UIContextualAction{
+    func rightSwipeIndex(index: IndexPath) -> UIContextualAction{
         
         //   let array = self.arrayNews[index.row]
         
-        let action = UIContextualAction(style: .normal, title: "Favorite") { (action, view, completion) in
+        let action = UIContextualAction(style: .normal, title: "Compartilhar") { (action, view, completion) in
             self.createNotification(index: index)
             self.selected = index.row
             completion(true)
             print("clicou na linha \(index)")
         }
-        // action.image =
-        // action.backgroundColor
+        // action.image = UIImage(named: "relogio")
+         action.backgroundColor = colors.orange
+        
+        return action
+    }
+    
+    func swipeIndex(index: IndexPath) -> UIContextualAction{
+        
+        //   let array = self.arrayNews[index.row]
+        
+        let action = UIContextualAction(style: .normal, title: "Schedule") { (action, view, completion) in
+            self.createNotification(index: index)
+            self.selected = index.row
+            completion(true)
+            print("clicou na linha \(index)")
+        }
+
+        action.image = UIImage(named: "relogio")
+        action.backgroundColor = colors.orange
         
         return action
     }

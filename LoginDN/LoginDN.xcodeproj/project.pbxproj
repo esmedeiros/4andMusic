@@ -39,6 +39,7 @@
 		ACBAE2C9230CB45800CD289A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAE2C8230CB45800CD289A /* Home.storyboard */; };
 		ACBAE2CB230CB4C000CD289A /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAE2CA230CB4C000CD289A /* User.storyboard */; };
 		ACBAE2CD230CB4D000CD289A /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAE2CC230CB4D000CD289A /* Favorite.storyboard */; };
+		ACFCA033230F70E5009A2B6B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCA032230F70E5009A2B6B /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		ACBAE2C8230CB45800CD289A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ACBAE2CA230CB4C000CD289A /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		ACBAE2CC230CB4D000CD289A /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		ACFCA032230F70E5009A2B6B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		8E0D577022FCE70600160B42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACBAE2CF230F704300CD289A /* Colors */,
 				8E0D576922FCE3FC00160B42 /* GenericStore.swift */,
 				8E900D1C230600C1000A297A /* Music.swift */,
 				8E0FBC2123076BA500E4D31B /* News.swift */,
@@ -220,6 +223,14 @@
 				ACBAE2CC230CB4D000CD289A /* Favorite.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ACBAE2CF230F704300CD289A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCA032230F70E5009A2B6B /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		CE2907CFE1BD4A948C44A0A7 /* Frameworks */ = {
@@ -364,6 +375,7 @@
 				8E36EB2322FB41BC0091E885 /* SignOutViewController.swift in Sources */,
 				8E0FBC2523076D8A00E4D31B /* NewsCell.swift in Sources */,
 				8E0D577422FCE71700160B42 /* User.swift in Sources */,
+				ACFCA033230F70E5009A2B6B /* Colors.swift in Sources */,
 				8E36EB2122FB41AA0091E885 /* SignInViewController.swift in Sources */,
 				8E0D576A22FCE3FC00160B42 /* GenericStore.swift in Sources */,
 				8E0D577622FCE71D00160B42 /* AuthUser.swift in Sources */,
