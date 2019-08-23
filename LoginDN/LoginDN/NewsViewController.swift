@@ -111,7 +111,7 @@ extension NewsViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let swipe = rightSwipeIndex(index: indexPath)
+        let swipe = leftSwipeIndex(index: indexPath)
 
         let swipeAction = UISwipeActionsConfiguration(actions: [swipe])
         
@@ -128,17 +128,22 @@ extension NewsViewController: UITableViewDelegate{
         return swipeAction
     }
     
-    func rightSwipeIndex(index: IndexPath) -> UIContextualAction{
+    func leftSwipeIndex(index: IndexPath) -> UIContextualAction{
         
         //   let array = self.arrayNews[index.row]
         
-        let action = UIContextualAction(style: .normal, title: "Compartilhar") { (action, view, completion) in
-            self.createNotification(index: index)
+        let action = UIContextualAction(style: .normal, title: "Shared") { (action, view, completion) in
+            //self.createNotification(index: index)
             self.selected = index.row
             completion(true)
+            //self.sharedPressed()
+            let activityVC = UIActivityViewController(activityItems: ["google.com"], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            
+            self.present(activityVC, animated: true, completion: nil)
             print("clicou na linha \(index)")
         }
-        // action.image = UIImage(named: "relogio")
+        action.image = UIImage(named: "share")
          action.backgroundColor = colors.orange
         
         return action
@@ -152,6 +157,7 @@ extension NewsViewController: UITableViewDelegate{
             self.createNotification(index: index)
             self.selected = index.row
             completion(true)
+            AlertController.showAlert(self, title: "Alert", message: "successfully reminder")
             print("clicou na linha \(index)")
         }
 
@@ -209,18 +215,20 @@ extension NewsViewController: UITableViewDelegate{
         }
         
     }
-    
-    
-    
     func scheduleNotification(){
     }
     
+//    func sharedPressed(){
+//
+//        let activityVC = UIActivityViewController(activityItems: ["google.com"], applicationActivities: nil)
+//        activityVC.popoverPresentationController?.sourceView = self.view
+//
+//        self.present(activityVC, animated: true, completion: nil)
+//
+//    }
+    
 }
-
-
 extension NewsViewController: UNUserNotificationCenterDelegate{
-    
-    
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.840048"
+            timestampString = "588215141.124972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.840204"
+            timestampString = "588215141.125788"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/NewsViewController.swift"
-            timestampString = "588138859.8408149"
+            timestampString = "588224556.8943059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -266,12 +266,12 @@
                   moduleName = "LoginDN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macpro/Desktop/Repositorio%20GIT/4andMusic/4andMusic/LoginDN/LoginDN/SignInViewController.swift"
-                  timestampString = "588130709.457929"
+                  timestampString = "588222896.550908"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
                   endingLineNumber = "111"
-                  offsetFromSymbolStart = "876">
+                  offsetFromSymbolStart = "1000">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -281,7 +281,7 @@
                   moduleName = "LoginDN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macpro/Desktop/Repositorio%20GIT/4andMusic/4andMusic/LoginDN/LoginDN/SignInViewController.swift"
-                  timestampString = "588130709.461001"
+                  timestampString = "588222896.553583"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "112"
@@ -394,7 +394,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.840977"
+            timestampString = "588215141.126214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -410,7 +410,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.8410749"
+            timestampString = "588215141.126272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -426,7 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.841163"
+            timestampString = "588215141.126315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -442,7 +442,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.841246"
+            timestampString = "588215141.1263551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -458,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.84131"
+            timestampString = "588215141.126394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -474,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginDN/SignOutViewController.swift"
-            timestampString = "588138859.841379"
+            timestampString = "588215141.1264319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -496,6 +496,70 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginDN/NewsViewController.swift"
+            timestampString = "588224556.894992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "leftSwipeIndex(index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginDN.NewsViewController.leftSwipeIndex(index: Foundation.IndexPath) -&gt; __C.UIContextualAction"
+                  moduleName = "LoginDN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpro/Desktop/Repositorio%20GIT/4andMusic/4andMusic/LoginDN/LoginDN/NewsViewController.swift"
+                  timestampString = "588222896.597403"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIContextualAction, __C.UIView, (Swift.Bool) -&gt; ()) -&gt; () in LoginDN.NewsViewController.leftSwipeIndex(index: Foundation.IndexPath) -&gt; __C.UIContextualAction"
+                  moduleName = "LoginDN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpro/Desktop/Repositorio%20GIT/4andMusic/4andMusic/LoginDN/LoginDN/NewsViewController.swift"
+                  timestampString = "588222896.5996929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginDN/NewsViewController.swift"
+            timestampString = "588224556.895348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "leftSwipeIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
