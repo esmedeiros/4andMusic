@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import UserNotifications
 
 class SignUpViewController: BaseViewController {
 
@@ -16,6 +17,9 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    
+    let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +65,15 @@ class SignUpViewController: BaseViewController {
     
     @IBAction func registerBtTapped(_ sender: Any) {
         performSignUp()
+    UNUserNotificationCenter.current().requestAuthorization(options: options) { (didAllow, error) in
+        if error != nil{
+            print("Notificação Negada")
+        }else{
+            print("Notificação Autorizada")
+        }
+    }
+        
+   
     }
     
     
