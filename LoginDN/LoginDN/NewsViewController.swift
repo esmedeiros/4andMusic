@@ -63,21 +63,6 @@ class NewsViewController: UIViewController {
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        selected = indexPath.row
-        
-        self.performSegue(withIdentifier: "detailSegue", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DetailsViewController {
-            
-            let news: News = arrayNews[selected]
-            destination.newsURL = news.url
-        }
-    }
 }
 
 extension NewsViewController: UITableViewDataSource{
@@ -108,6 +93,23 @@ extension NewsViewController: UITableViewDataSource{
 }
 
 extension NewsViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        selected = indexPath.row
+        
+        self.performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            
+            let news: News = arrayNews[selected]
+            destination.newsURL = news.url
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -143,7 +145,7 @@ extension NewsViewController: UITableViewDelegate{
             self.present(activityVC, animated: true, completion: nil)
             print("clicou na linha \(index)")
         }
-        action.image = UIImage(named: "share")
+         action.image = UIImage(named: "share")
          action.backgroundColor = colors.orange
         
         return action
@@ -266,15 +268,7 @@ extension NewsViewController: UNUserNotificationCenterDelegate{
             }
         }
         
-        
-        
-        
-        
     }
     
-    
-    
-    
-    
-    
+
 }
