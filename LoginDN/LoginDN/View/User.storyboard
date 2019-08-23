@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign Out View Controller-->
+        <!--User-->
         <scene sceneID="Ijr-ss-NW5">
             <objects>
                 <viewController id="Nhj-eJ-J2F" customClass="SignOutViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1Q-9V-jYq">
-                                <rect key="frame" x="20" y="235" width="374" height="33"/>
+                                <rect key="frame" x="20" y="276" width="374" height="33"/>
                                 <color key="backgroundColor" red="0.79607843137254897" green="0.38823529411764707" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,12 +73,12 @@
                             <constraint firstItem="GIB-af-fZy" firstAttribute="leading" secondItem="LZ2-UK-00D" secondAttribute="trailing" constant="14" id="giw-jf-nRh"/>
                             <constraint firstItem="pEK-fZ-e65" firstAttribute="trailing" secondItem="cpq-aV-vW7" secondAttribute="trailing" constant="12" id="pCh-sc-8hY"/>
                             <constraint firstItem="pEK-fZ-e65" firstAttribute="trailing" secondItem="GIB-af-fZy" secondAttribute="trailing" constant="26" id="rB6-ta-ii3"/>
-                            <constraint firstItem="l1Q-9V-jYq" firstAttribute="top" secondItem="LZ2-UK-00D" secondAttribute="bottom" constant="55" id="sOj-SG-lzP"/>
+                            <constraint firstItem="l1Q-9V-jYq" firstAttribute="top" secondItem="LZ2-UK-00D" secondAttribute="bottom" constant="96" id="sOj-SG-lzP"/>
                             <constraint firstItem="cpq-aV-vW7" firstAttribute="leading" secondItem="pEK-fZ-e65" secondAttribute="leading" constant="13" id="tuw-Ov-pK5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pEK-fZ-e65"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="tabBarUser50-50" systemItem="contacts" id="Rpa-N8-2ey"/>
+                    <tabBarItem key="tabBarItem" title="User" image="75-75-tabBarUser" selectedImage="75-75-tabBarUser" id="Rpa-N8-2ey"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="profileImage" destination="LZ2-UK-00D" id="BSB-CG-5Qa"/>
@@ -91,8 +91,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="75-75-tabBarUser" width="25" height="25"/>
         <image name="background" width="208" height="231"/>
         <image name="profileNews" width="373" height="373"/>
-        <image name="tabBarUser50-50" width="50" height="50"/>
     </resources>
 </document>

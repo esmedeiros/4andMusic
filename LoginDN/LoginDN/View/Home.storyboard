@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News View Controller-->
+        <!--Home-->
         <scene sceneID="up4-Ib-HoJ">
             <objects>
                 <viewController storyboardIdentifier="NewsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tRr-XD-Pe1" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KLp-gK-aSK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="W6d-3d-j10"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeMusic" selectedImage="HomeMusic" id="W6d-3d-j10"/>
                     <navigationItem key="navigationItem" id="saM-Wz-CiS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -106,5 +106,6 @@
     <resources>
         <image name="4music-horizontal" width="2238" height="464"/>
         <image name="BackIcon" width="1431" height="962"/>
+        <image name="HomeMusic" width="25" height="25"/>
     </resources>
 </document>
