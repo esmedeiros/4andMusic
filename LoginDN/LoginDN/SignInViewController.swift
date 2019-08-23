@@ -25,8 +25,8 @@ class SignInViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.emailTF.text = "euclides.sena@hotmail.com"
-        self.passwordTF.text = "12345678"
+        self.emailTF.text = "alexandreaun@gmail.com"
+        self.passwordTF.text = "123456"
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)

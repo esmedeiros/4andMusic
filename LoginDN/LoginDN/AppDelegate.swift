@@ -22,11 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        
-//        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-//
-//
-//
+
 //
 //        if Auth.auth().currentUser == nil{
 //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
