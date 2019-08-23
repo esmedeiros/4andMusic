@@ -135,9 +135,10 @@ extension NewsViewController: UITableViewDelegate{
         let action = UIContextualAction(style: .normal, title: "Shared") { (action, view, completion) in
             //self.createNotification(index: index)
             self.selected = index.row
+            let URLToShare = self.arrayNews[self.selected].url
             completion(true)
             //self.sharedPressed()
-            let activityVC = UIActivityViewController(activityItems: ["google.com"], applicationActivities: nil)
+            let activityVC = UIActivityViewController(activityItems: [URLToShare], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             
             self.present(activityVC, animated: true, completion: nil)
