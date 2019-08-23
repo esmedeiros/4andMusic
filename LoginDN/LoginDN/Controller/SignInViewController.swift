@@ -12,27 +12,26 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class SignInViewController: BaseViewController {
-
+    
     @IBOutlet weak var logginFBButton: FBLoginButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     override func viewDidAppear(_ animated: Bool) {
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        self.emailTF.text = "alexandreaun@gmail.com"
-        self.passwordTF.text = "123456"
+        
+
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification , object: nil)
-     
+        
         
         self.hiddenLoadingAnimation()
         emailTF.delegate = self
@@ -41,7 +40,7 @@ class SignInViewController: BaseViewController {
     }
     
     deinit {
-
+        
         NotificationCenter.default.removeObserver(self,name: UIResponder.keyboardWillShowNotification , object: nil)
         NotificationCenter.default.removeObserver(self,name: UIResponder.keyboardWillHideNotification , object: nil)
         NotificationCenter.default.removeObserver(self,name: UIResponder.keyboardWillChangeFrameNotification , object: nil)
@@ -57,9 +56,8 @@ class SignInViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        emailTF.text = ""
-//        passwordTF.text = ""
-     
+        
+        
     }
     
     func performSignIn(){
@@ -77,7 +75,7 @@ class SignInViewController: BaseViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             guard error == nil else{
                 AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-               self.hiddenLoadingAnimation()
+                self.hiddenLoadingAnimation()
                 return
             }
             self.performSegue(withIdentifier: "signInSegue", sender: nil)
@@ -94,7 +92,7 @@ class SignInViewController: BaseViewController {
 
 
 extension SignInViewController: LoginButtonDelegate {
-
+    
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("loginButtonDidLogOut")
@@ -127,7 +125,7 @@ extension SignInViewController: LoginButtonDelegate {
 extension SignInViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-         if textField.text! == "" {
+        if textField.text! == "" {
             return false
         } else if textField == emailTF {
             textField.resignFirstResponder()

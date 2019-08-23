@@ -29,7 +29,7 @@ class NewsViewController: UIViewController {
     }
     
     var getMusicHotSpot: NewsAPI = NewsAPI()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +43,6 @@ class NewsViewController: UIViewController {
         getMusicHotSpot.getNews { (news, erro) in
             if erro != nil{
                 
-                if let array = news{
-                }
                 print("Deu Erro ao carregar as noticias \(erro)")
             }else{
                 print("Show de bola!!! \(news)")
@@ -114,11 +112,11 @@ extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let swipe = leftSwipeIndex(index: indexPath)
-
+        
         let swipeAction = UISwipeActionsConfiguration(actions: [swipe])
         
         return swipeAction
-
+        
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -146,8 +144,8 @@ extension NewsViewController: UITableViewDelegate{
             self.present(activityVC, animated: true, completion: nil)
             print("clicou na linha \(index)")
         }
-         action.image = UIImage(named: "share")
-         action.backgroundColor = colors.orange
+        action.image = UIImage(named: "share")
+        action.backgroundColor = colors.orange
         
         return action
     }
@@ -163,7 +161,7 @@ extension NewsViewController: UITableViewDelegate{
             AlertController.showAlert(self, title: "Alert", message: "successfully reminder")
             print("clicou na linha \(index)")
         }
-
+        
         action.image = UIImage(named: "relogio")
         action.backgroundColor = colors.orange
         
@@ -221,14 +219,6 @@ extension NewsViewController: UITableViewDelegate{
     func scheduleNotification(){
     }
     
-//    func sharedPressed(){
-//
-//        let activityVC = UIActivityViewController(activityItems: ["google.com"], applicationActivities: nil)
-//        activityVC.popoverPresentationController?.sourceView = self.view
-//
-//        self.present(activityVC, animated: true, completion: nil)
-//
-//    }
     
 }
 extension NewsViewController: UNUserNotificationCenterDelegate{
@@ -271,5 +261,5 @@ extension NewsViewController: UNUserNotificationCenterDelegate{
         
     }
     
-
+    
 }

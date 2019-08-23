@@ -22,9 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-
        chooseStoryboardToOpen()
         
         return true

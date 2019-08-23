@@ -14,5 +14,5 @@ protocol StoreAuth: GenericStore {
     func authFacebookUser(completion: @escaping completion<LoginManagerLoginResult?>)
     func logoutFacebookUser()
     func authUserWithEmail(user: User, completion: @escaping completion<AuthUser?>)
-    
+
 }

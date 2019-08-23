@@ -9,11 +9,11 @@
 import Foundation
 import Alamofire
 
-class MusicAPI{
+class NewsAPI{
     
-    func getMusic(resultRequest: @escaping (_ result:[Music]?, _ erro: NSError?) -> Void) -> Void{
+    func getNews(resultRequest: @escaping (_ result:[News]?, _ erro: NSError?) -> Void) -> Void{
         
-        let url = "https://api.vagalume.com.br/hotspots.php?apikey=660a4395f992ff67786584e238f501aa"
+        let url = "https://www.vagalume.com.br/news/index.js"
         
         Alamofire.request(url, method: .get).responseJSON { (response) in
             if response.response?.statusCode == 200{
@@ -23,22 +23,22 @@ class MusicAPI{
                     resultRequest(nil,NSError())
                     return
                 }
-                
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
-                    let resultJSON = try? JSONDecoder().decode(MusicRequest.self, from: dataJSON)
-                    
-                    resultRequest(resultJSON?.hotspots,nil)
+                    let resultJSON = try decoder.decode(NewsRequest.self, from: dataJSON)
+                    resultRequest(resultJSON.news,nil)
                 }catch {
                     resultRequest(nil,NSError())
                 }
-
                 
-                
-            }else {
-                print(response.response?.statusCode)
+            } else {
+                resultRequest(nil, response.error as NSError?)
             }
         }
+        
         
     }
     
 }
+

@@ -10,19 +10,19 @@ import UIKit
 import Firebase
 
 class ResetPasswordViewController: BaseViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var buttonReset: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         emailTextField.delegate = self
         
     }
-
-    @IBAction func resetPasswordTapped(_ sender: Any) {
     
+    @IBAction func resetPasswordTapped(_ sender: Any) {
+        
         resetpassword()
         
     }
@@ -34,10 +34,10 @@ class ResetPasswordViewController: BaseViewController {
             
             if error == nil{
                 AlertController.showAlert(self, title: "Congratulations!!!", message: "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password")
-            self.hiddenLoadingAnimation()
+                self.hiddenLoadingAnimation()
             }else{
                 AlertController.showAlert(self, title: "Attention!!!", message: "Please enter an email valid")
-            self.hiddenLoadingAnimation()
+                self.hiddenLoadingAnimation()
             }
         }
         
@@ -59,9 +59,9 @@ class ResetPasswordViewController: BaseViewController {
     }
     
     @IBAction func backSignIn(_ sender: Any) {
-    
-    self.dismiss(animated: true, completion: nil)
-    
+        
+        self.dismiss(animated: true, completion: nil)
+        
     }
 }
 
@@ -72,7 +72,7 @@ extension ResetPasswordViewController: UITextFieldDelegate{
             return false
         } else if textField == emailTextField {
             textField.resignFirstResponder()
-              resetpassword()
+            resetpassword()
             return true
         }else {
             return false

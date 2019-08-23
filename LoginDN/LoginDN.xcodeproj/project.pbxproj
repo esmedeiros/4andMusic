@@ -10,15 +10,9 @@
 		8A81185B8D99262398550DA8 /* Pods_LoginDN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1479F4A7C2F30C835836CAE5 /* Pods_LoginDN.framework */; };
 		8E080D26230221D400DE2F51 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */; };
 		8E0D576A22FCE3FC00160B42 /* GenericStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D576922FCE3FC00160B42 /* GenericStore.swift */; };
-		8E0D576D22FCE41800160B42 /* APIAuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D576C22FCE41800160B42 /* APIAuthStore.swift */; };
 		8E0D576F22FCE42100160B42 /* StoreAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D576E22FCE42100160B42 /* StoreAuth.swift */; };
 		8E0D577422FCE71700160B42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D577322FCE71700160B42 /* User.swift */; };
 		8E0D577622FCE71D00160B42 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D577522FCE71D00160B42 /* AuthUser.swift */; };
-		8E0D8C19230652F300E5DCE7 /* CellMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C17230652F300E5DCE7 /* CellMusic.swift */; };
-		8E0D8C1A230652F300E5DCE7 /* CellMusic.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E0D8C18230652F300E5DCE7 /* CellMusic.xib */; };
-		8E0D8C1F2306588A00E5DCE7 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C1E2306588A00E5DCE7 /* MusicAPI.swift */; };
-		8E0D8C2123065DED00E5DCE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C2023065DED00E5DCE7 /* ViewController.swift */; };
-		8E0D8C23230664C700E5DCE7 /* MusicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D8C22230664C700E5DCE7 /* MusicRequest.swift */; };
 		8E0F3D85230C311A00181D0B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F3D84230C311A00181D0B /* DetailsViewController.swift */; };
 		8E0FBC2223076BA500E4D31B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FBC2123076BA500E4D31B /* News.swift */; };
 		8E0FBC2523076D8A00E4D31B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FBC2323076D8A00E4D31B /* NewsCell.swift */; };
@@ -35,10 +29,8 @@
 		8E36EB2522FB444B0091E885 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */; };
 		8E36EB2722FB4E860091E885 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36EB2622FB4E860091E885 /* AlertController.swift */; };
 		8E51E403230CB96D009AA827 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E51E402230CB96D009AA827 /* BaseViewController.swift */; };
-		8E900D1D230600C1000A297A /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E900D1C230600C1000A297A /* Music.swift */; };
 		ACBAE2C9230CB45800CD289A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAE2C8230CB45800CD289A /* Home.storyboard */; };
 		ACBAE2CB230CB4C000CD289A /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAE2CA230CB4C000CD289A /* User.storyboard */; };
-		ACBAE2CD230CB4D000CD289A /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAE2CC230CB4D000CD289A /* Favorite.storyboard */; };
 		ACFCA033230F70E5009A2B6B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCA032230F70E5009A2B6B /* Colors.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,15 +40,9 @@
 		71A5ACBA6487BF14DD986B62 /* Pods-LoginDN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDN.debug.xcconfig"; path = "Target Support Files/Pods-LoginDN/Pods-LoginDN.debug.xcconfig"; sourceTree = "<group>"; };
 		8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8E0D576922FCE3FC00160B42 /* GenericStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStore.swift; sourceTree = "<group>"; };
-		8E0D576C22FCE41800160B42 /* APIAuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAuthStore.swift; sourceTree = "<group>"; };
 		8E0D576E22FCE42100160B42 /* StoreAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAuth.swift; sourceTree = "<group>"; };
 		8E0D577322FCE71700160B42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8E0D577522FCE71D00160B42 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
-		8E0D8C17230652F300E5DCE7 /* CellMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMusic.swift; sourceTree = "<group>"; };
-		8E0D8C18230652F300E5DCE7 /* CellMusic.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellMusic.xib; sourceTree = "<group>"; };
-		8E0D8C1E2306588A00E5DCE7 /* MusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
-		8E0D8C2023065DED00E5DCE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E0D8C22230664C700E5DCE7 /* MusicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRequest.swift; sourceTree = "<group>"; };
 		8E0F3D84230C311A00181D0B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8E0FBC2123076BA500E4D31B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8E0FBC2323076D8A00E4D31B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -75,10 +61,8 @@
 		8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E36EB2622FB4E860091E885 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		8E51E402230CB96D009AA827 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		8E900D1C230600C1000A297A /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		ACBAE2C8230CB45800CD289A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ACBAE2CA230CB4C000CD289A /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		ACBAE2CC230CB4D000CD289A /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		ACFCA032230F70E5009A2B6B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,18 +87,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		8E0D576822FCE3D500160B42 /* Network */ = {
+		8E0D576822FCE3D500160B42 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E0FBC2723076FB700E4D31B /* NewsViewController.swift */,
+				8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */,
+				8E36EB2622FB4E860091E885 /* AlertController.swift */,
+				8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */,
+				8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */,
+				8E36EB2022FB41AA0091E885 /* SignInViewController.swift */,
 				8E0D576B22FCE3FE00160B42 /* Auth */,
 			);
-			path = Network;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8E0D576B22FCE3FE00160B42 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				8E0D576C22FCE41800160B42 /* APIAuthStore.swift */,
 				8E0D576E22FCE42100160B42 /* StoreAuth.swift */,
 			);
 			path = Auth;
@@ -123,11 +112,8 @@
 		8E0D577022FCE70600160B42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACFCA03623103CC4009A2B6B /* News */,
 				ACBAE2CF230F704300CD289A /* Colors */,
-				8E0D576922FCE3FC00160B42 /* GenericStore.swift */,
-				8E900D1C230600C1000A297A /* Music.swift */,
-				8E0FBC2123076BA500E4D31B /* News.swift */,
-				8E0D8C22230664C700E5DCE7 /* MusicRequest.swift */,
 				8E0D577122FCE70C00160B42 /* User */,
 			);
 			path = Model;
@@ -145,8 +131,6 @@
 		8E0D8C1B2306531800E5DCE7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8E0D8C17230652F300E5DCE7 /* CellMusic.swift */,
-				8E0D8C18230652F300E5DCE7 /* CellMusic.xib */,
 				8E0FBC2323076D8A00E4D31B /* NewsCell.swift */,
 				8E0FBC2423076D8A00E4D31B /* NewsCell.xib */,
 			);
@@ -162,13 +146,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8E0D8C1D2306586A00E5DCE7 /* Controller */ = {
+		8E0D8C1D2306586A00E5DCE7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8E0D8C1E2306588A00E5DCE7 /* MusicAPI.swift */,
+				8E0D576922FCE3FC00160B42 /* GenericStore.swift */,
 				8E0FBC292307713700E4D31B /* NewsAPI.swift */,
 			);
-			path = Controller;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		8E36EB0222FB2CB80091E885 = {
@@ -195,18 +179,10 @@
 			children = (
 				AC46E65B230CB2F100D94364 /* View */,
 				8E0D577022FCE70600160B42 /* Model */,
-				8E0D8C1D2306586A00E5DCE7 /* Controller */,
-				8E0D576822FCE3D500160B42 /* Network */,
+				8E0D8C1D2306586A00E5DCE7 /* Network */,
+				8E0D576822FCE3D500160B42 /* Controller */,
 				8E36EB0E22FB2CB80091E885 /* AppDelegate.swift */,
 				8E51E402230CB96D009AA827 /* BaseViewController.swift */,
-				8E36EB2022FB41AA0091E885 /* SignInViewController.swift */,
-				8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */,
-				8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */,
-				8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */,
-				8E36EB2622FB4E860091E885 /* AlertController.swift */,
-				8E0D8C2023065DED00E5DCE7 /* ViewController.swift */,
-				8E0FBC2723076FB700E4D31B /* NewsViewController.swift */,
-				8E0F3D84230C311A00181D0B /* DetailsViewController.swift */,
 				8E36EB1A22FB2CBA0091E885 /* Info.plist */,
 				8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */,
 			);
@@ -216,11 +192,11 @@
 		AC46E65B230CB2F100D94364 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E0F3D84230C311A00181D0B /* DetailsViewController.swift */,
 				8E0D8C1B2306531800E5DCE7 /* Cell */,
 				8E36EB1222FB2CB80091E885 /* Main.storyboard */,
 				ACBAE2C8230CB45800CD289A /* Home.storyboard */,
 				ACBAE2CA230CB4C000CD289A /* User.storyboard */,
-				ACBAE2CC230CB4D000CD289A /* Favorite.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +207,14 @@
 				ACFCA032230F70E5009A2B6B /* Colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		ACFCA03623103CC4009A2B6B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8E0FBC2123076BA500E4D31B /* News.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		CE2907CFE1BD4A948C44A0A7 /* Frameworks */ = {
@@ -301,14 +285,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E0D8C1A230652F300E5DCE7 /* CellMusic.xib in Resources */,
 				8E36EB1922FB2CBA0091E885 /* LaunchScreen.storyboard in Resources */,
 				8E36EB2522FB444B0091E885 /* GoogleService-Info.plist in Resources */,
 				8E36EB1622FB2CBA0091E885 /* Assets.xcassets in Resources */,
 				8E36EB1422FB2CB80091E885 /* Main.storyboard in Resources */,
 				8E0FBC2623076D8A00E4D31B /* NewsCell.xib in Resources */,
 				ACBAE2C9230CB45800CD289A /* Home.storyboard in Resources */,
-				ACBAE2CD230CB4D000CD289A /* Favorite.storyboard in Resources */,
 				ACBAE2CB230CB4C000CD289A /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +352,6 @@
 				8E51E403230CB96D009AA827 /* BaseViewController.swift in Sources */,
 				8E080D26230221D400DE2F51 /* ResetPasswordViewController.swift in Sources */,
 				8E0FBC2A2307713700E4D31B /* NewsAPI.swift in Sources */,
-				8E0D8C19230652F300E5DCE7 /* CellMusic.swift in Sources */,
 				8E36EB0F22FB2CB80091E885 /* AppDelegate.swift in Sources */,
 				8E36EB2322FB41BC0091E885 /* SignOutViewController.swift in Sources */,
 				8E0FBC2523076D8A00E4D31B /* NewsCell.swift in Sources */,
@@ -380,11 +361,6 @@
 				8E0D576A22FCE3FC00160B42 /* GenericStore.swift in Sources */,
 				8E0D577622FCE71D00160B42 /* AuthUser.swift in Sources */,
 				8E0FBC2223076BA500E4D31B /* News.swift in Sources */,
-				8E0D8C1F2306588A00E5DCE7 /* MusicAPI.swift in Sources */,
-				8E0D576D22FCE41800160B42 /* APIAuthStore.swift in Sources */,
-				8E0D8C2123065DED00E5DCE7 /* ViewController.swift in Sources */,
-				8E900D1D230600C1000A297A /* Music.swift in Sources */,
-				8E0D8C23230664C700E5DCE7 /* MusicRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY9HVGKNG7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginDN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -551,7 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY9HVGKNG7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginDN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

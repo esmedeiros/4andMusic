@@ -13,20 +13,17 @@ import FBSDKLoginKit
 import SDWebImage
 
 class SignOutViewController: BaseViewController {
-
-    
     
     @IBOutlet weak var userNameTextField: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
+    let colors = Colors()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pink: UIColor = UIColor(red: 205/255, green: 99/255, blue: 69/255, alpha: 1.0)
         
-        let orange: UIColor = UIColor(red: 192/255, green: 51/255, blue: 98/255, alpha: 1.0)
-        
-        setGradientBackground(colorTop: orange, colorBottom: pink)
+        setGradientBackground(colorTop: colors.orange, colorBottom: colors.pink)
         if Auth.auth().currentUser != nil{
             print("eh diff de nil")
             print(Auth.auth().currentUser?.email)
@@ -42,7 +39,7 @@ class SignOutViewController: BaseViewController {
         }
         
         if let usernameImg = Auth.auth().currentUser?.photoURL {
-        
+            
             profileImage.sd_setImage(with: Auth.auth().currentUser?.photoURL, completed: nil)
         }
         
@@ -53,7 +50,7 @@ class SignOutViewController: BaseViewController {
     }
     
     @IBAction func signOutTappedNews(_ sender: Any) {
-
+        
         print("tapped")
         do{
             try Auth.auth().signOut()
@@ -65,7 +62,7 @@ class SignOutViewController: BaseViewController {
             print("button acionado")
         }catch{
             print(error)
-
+            
         }
     }
     
@@ -79,5 +76,5 @@ class SignOutViewController: BaseViewController {
         
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
-
+    
 }

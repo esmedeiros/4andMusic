@@ -12,7 +12,7 @@ import FirebaseAuth
 import UserNotifications
 
 class SignUpViewController: BaseViewController {
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,13 +27,17 @@ class SignUpViewController: BaseViewController {
         
         self.hiddenLoadingAnimation()
     }
-
+    
     private func configureTextFields(){
         
         userNameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
+    
+    
+
+    
     
     func performSignUp(){
         
@@ -56,8 +60,10 @@ class SignUpViewController: BaseViewController {
                 AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
                 self.hiddenLoadingAnimation()
                 return
-        }
+            }
+          
             UserDefaults.standard.set(username, forKey: "username")
+        
             self.performSegue(withIdentifier: "signUpSegue", sender: nil)
             
         }
@@ -65,15 +71,15 @@ class SignUpViewController: BaseViewController {
     
     @IBAction func registerBtTapped(_ sender: Any) {
         performSignUp()
-    UNUserNotificationCenter.current().requestAuthorization(options: options) { (didAllow, error) in
-        if error != nil{
-            print("Notificação Negada")
-        }else{
-            print("Notificação Autorizada")
+
+        UNUserNotificationCenter.current().requestAuthorization(options: options) { (didAllow, error) in
+            if error != nil{
+                print("Notificação Negada")
+            }else{
+                print("Notificação Autorizada")
+            }
         }
-    }
         
-   
     }
     
     

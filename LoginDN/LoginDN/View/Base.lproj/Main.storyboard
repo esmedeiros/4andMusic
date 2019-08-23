@@ -279,36 +279,6 @@
             </objects>
             <point key="canvasLocation" x="-678" y="-457"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="4Ug-8b-87Y">
-            <objects>
-                <viewController id="cyS-7l-AuO" customClass="ViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mAn-uV-Rqp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3xa-C2-hGZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="3xa-C2-hGZ" firstAttribute="trailing" secondItem="cDi-E1-8J9" secondAttribute="trailing" id="6DF-oz-utQ"/>
-                            <constraint firstItem="3xa-C2-hGZ" firstAttribute="leading" secondItem="cDi-E1-8J9" secondAttribute="leading" id="CK1-iD-jx6"/>
-                            <constraint firstItem="3xa-C2-hGZ" firstAttribute="top" secondItem="cDi-E1-8J9" secondAttribute="top" id="Fha-xg-Sjv"/>
-                            <constraint firstAttribute="bottom" secondItem="3xa-C2-hGZ" secondAttribute="bottom" id="IJO-oc-TcC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cDi-E1-8J9"/>
-                    </view>
-                    <connections>
-                        <outlet property="musicTableView" destination="3xa-C2-hGZ" id="CLo-23-glO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxb-24-Zb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2252" y="177"/>
-        </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="b8y-jG-JMq">
             <objects>
@@ -420,7 +390,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="f8a-Dr-TZt" kind="relationship" relationship="viewControllers" id="1Uu-HL-Yej"/>
-                        <segue destination="taF-sa-03o" kind="relationship" relationship="viewControllers" id="7eC-kT-Pj1"/>
                         <segue destination="IKJ-jo-AmX" kind="relationship" relationship="viewControllers" id="gUX-RU-GUP"/>
                     </connections>
                 </tabBarController>
@@ -437,16 +406,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAv-vP-Z9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2336" y="-609"/>
-        </scene>
-        <!--Favorite-->
-        <scene sceneID="u6p-J6-58s">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Favorite" id="taF-sa-03o" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bQN-lK-tHs"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DH8-Q3-yWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2346" y="-471"/>
         </scene>
         <!--User-->
         <scene sceneID="gNF-MK-v7a">
