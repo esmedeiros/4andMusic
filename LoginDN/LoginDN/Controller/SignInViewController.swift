@@ -95,13 +95,10 @@ extension SignInViewController: LoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        self.showLoadingAnimation()
-        signIncontroller.getSigninFaceBook { (success) in
-            if success{
-                self.hiddenLoadingAnimation()
-                self.performSegue(withIdentifier: "signInSegue", sender: nil)
-            }
-            self.showLoadingAnimation()
+            signIncontroller.getSigninFaceBook { (success) in
+                if success{
+                    self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                }
         }
     }
 }

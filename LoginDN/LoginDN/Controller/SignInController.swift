@@ -30,11 +30,8 @@ class SignInController{
         
         Auth.auth().signIn(with: credential) { (authResult, error) in
             if let error = error {
-                print(error)
                completion(false)
-                return
             } else {
-                print("------ Usuário autenticado com sucesso!!!!")
                 completion(true)
             }
         }
