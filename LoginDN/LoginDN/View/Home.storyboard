@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tRr-XD-Pe1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="up4-Ib-HoJ">
+            <objects>
+                <viewController storyboardIdentifier="NewsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tRr-XD-Pe1" customClass="NewsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CnN-V2-zy7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="290" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WLI-cb-gwY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75294117650000003" green="0.20000000000000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WLI-cb-gwY" firstAttribute="leading" secondItem="KLp-gK-aSK" secondAttribute="leading" id="HDH-nI-NqV"/>
+                            <constraint firstItem="KLp-gK-aSK" firstAttribute="bottom" secondItem="WLI-cb-gwY" secondAttribute="bottom" constant="-11" id="L1c-Vs-eNl"/>
+                            <constraint firstItem="WLI-cb-gwY" firstAttribute="top" secondItem="KLp-gK-aSK" secondAttribute="top" id="bQI-Uy-lrm"/>
+                            <constraint firstItem="KLp-gK-aSK" firstAttribute="trailing" secondItem="WLI-cb-gwY" secondAttribute="trailing" id="tH3-B2-eRr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KLp-gK-aSK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeMusic" selectedImage="HomeMusic" id="W6d-3d-j10"/>
+                    <navigationItem key="navigationItem" id="saM-Wz-CiS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableview" destination="WLI-cb-gwY" id="bfv-Y1-g3n"/>
+                        <segue destination="Z7c-uG-OQE" kind="presentation" identifier="detailSegue" id="brn-cT-ADr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgK-u3-Y7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389.8550724637685" y="-423.21428571428572"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="x6k-4J-pyL">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z7c-uG-OQE" customClass="DetailsViewController" customModule="LoginDN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R8j-zC-9SS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyN-Qm-hT7">
+                                <rect key="frame" x="0.0" y="83" width="414" height="779"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="VUM-P8-IbY"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNS-6E-LTj">
+                                <rect key="frame" x="7" y="49" width="48" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="X6U-cq-Qdx"/>
+                                    <constraint firstAttribute="height" constant="32" id="ZQX-lJ-asy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="zqA-2I-ZlL"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BackIcon"/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="Z7c-uG-OQE" eventType="touchUpInside" id="KMB-39-pJh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4music-horizontal" translatesAutoresizingMaskIntoConstraints="NO" id="y9L-Oh-7mC">
+                                <rect key="frame" x="113" y="44" width="188" height="37"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NyN-Qm-hT7" firstAttribute="bottom" secondItem="NbG-Mu-gGg" secondAttribute="bottom" id="AWZ-x0-mMT"/>
+                            <constraint firstItem="XNS-6E-LTj" firstAttribute="leading" secondItem="NbG-Mu-gGg" secondAttribute="leading" constant="7" id="EIU-jA-BVR"/>
+                            <constraint firstItem="y9L-Oh-7mC" firstAttribute="top" secondItem="NbG-Mu-gGg" secondAttribute="top" id="IQX-h6-Fbd"/>
+                            <constraint firstItem="NyN-Qm-hT7" firstAttribute="leading" secondItem="NbG-Mu-gGg" secondAttribute="leading" id="T3r-0C-pO8"/>
+                            <constraint firstItem="y9L-Oh-7mC" firstAttribute="leading" secondItem="XNS-6E-LTj" secondAttribute="trailing" constant="58" id="T8G-5Z-gF2"/>
+                            <constraint firstItem="NyN-Qm-hT7" firstAttribute="top" secondItem="NbG-Mu-gGg" secondAttribute="top" constant="39" id="YpG-UD-mVj"/>
+                            <constraint firstItem="XNS-6E-LTj" firstAttribute="top" secondItem="NbG-Mu-gGg" secondAttribute="top" constant="5" id="iNB-kq-Ne6"/>
+                            <constraint firstItem="NbG-Mu-gGg" firstAttribute="trailing" secondItem="y9L-Oh-7mC" secondAttribute="trailing" constant="113" id="lQC-PI-RhF"/>
+                            <constraint firstItem="NyN-Qm-hT7" firstAttribute="trailing" secondItem="NbG-Mu-gGg" secondAttribute="trailing" id="uaQ-QB-auk"/>
+                            <constraint firstItem="NyN-Qm-hT7" firstAttribute="top" secondItem="y9L-Oh-7mC" secondAttribute="bottom" constant="2" id="yFX-aF-lgt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NbG-Mu-gGg"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsWebKit" destination="NyN-Qm-hT7" id="Ra1-ut-ZJh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeG-rY-Oob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4579.7101449275369" y="-423.21428571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="4music-horizontal" width="2238" height="464"/>
+        <image name="BackIcon" width="1431" height="962"/>
+        <image name="HomeMusic" width="25" height="25"/>
+    </resources>
+</document>
