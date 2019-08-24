@@ -14,6 +14,7 @@ import UserNotificationsUI
 class NewsViewController: UIViewController {
     
     var selected:Int = 0
+    var indexIdentifier: Int = 0
     var notificationCenter = UNUserNotificationCenter.current()
     let colors = Colors()
     let newsController = NewsController()
@@ -65,12 +66,13 @@ extension NewsViewController: UITableViewDataSource{
 extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+        selected = indexPath.row
+        self.performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
-            let news: News = newsController.getElementAt(index: sender as! Int)
+            let news: News = newsController.getElementAt(index: selected)
             destination.newsURL = news.url
         }
     }
@@ -97,8 +99,10 @@ extension NewsViewController: UITableViewDelegate{
     
     func leftSwipeIndex(index: IndexPath) -> UIContextualAction{
         let action = UIContextualAction(style: .normal, title: "Shared") { (action, view, completion) in
-            let URLToShare = self.newsController.getElementAt(index: index.row).url
-
+            self.selected = index.row
+            
+            let URLToShare = self.newsController.getElementAt(index: self.selected).url
+            
             let activityVC = UIActivityViewController(activityItems: [URLToShare], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             
@@ -115,6 +119,8 @@ extension NewsViewController: UITableViewDelegate{
             self.newsController.requestAuthorization(completion: { (sucesso) in
                 if sucesso {
                     self.createNotification(index: index)
+                    self.selected = index.row
+                    completion(true)
                     AlertController.showAlert(self, title: "Alert", message: "Lembrete salvo com sucesso")
                 } else {
                     AlertController.showAlert(self, title: "Alert", message: "Você precisa autorizar as notificações do 4andMusic.")
@@ -189,7 +195,7 @@ extension NewsViewController: UNUserNotificationCenterDelegate{
         
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let destination = segue.destination as? DetailsViewController {
-                let news: News = newsController.getElementAt(index: sender as! Int)
+                let news: News = newsController.getElementAt(index: selected)
                 destination.newsURL = news.url
             }
         }

@@ -94,7 +94,12 @@ extension SignInViewController: LoginButtonDelegate {
         print("loginButtonDidLogOut")
     }
     
+    
+   // func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?)
+    
+    
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        guard let curr = AccessToken.current else {return}
         self.showLoadingAnimation()
         signIncontroller.getSigninFaceBook { (success) in
             if success{
