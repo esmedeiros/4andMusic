@@ -112,9 +112,14 @@ extension NewsViewController: UITableViewDelegate{
     
     func swipeIndex(index: IndexPath) -> UIContextualAction{
         let action = UIContextualAction(style: .normal, title: "Schedule") { (action, view, completion) in
-            self.createNotification(index: index)
-            AlertController.showAlert(self, title: "Alert", message: "successfully reminder")
-            print("clicou na linha \(index)")
+            self.newsController.requestAuthorization(completion: { (sucesso) in
+                if sucesso {
+                    self.createNotification(index: index)
+                    AlertController.showAlert(self, title: "Alert", message: "Lembrete salvo com sucesso")
+                } else {
+                    AlertController.showAlert(self, title: "Alert", message: "Você precisa autorizar as notificações do 4andMusic.")
+                }
+            })
         }
         
         action.image = UIImage(named: "relogio")
@@ -181,7 +186,6 @@ extension NewsViewController: UNUserNotificationCenterDelegate{
             }
             
         }
-        
         
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let destination = segue.destination as? DetailsViewController {

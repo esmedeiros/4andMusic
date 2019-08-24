@@ -9,9 +9,11 @@
 import Foundation
 import Firebase
 
+
 class SignUpController{
     
     let signUpController = SignInController()
+
     
     func getSignUp(email: String, password: String, completion: @escaping (Bool) -> Void){
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in

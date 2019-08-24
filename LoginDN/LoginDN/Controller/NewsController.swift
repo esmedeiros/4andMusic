@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UserNotifications
 
 class NewsController{
     
     let newsApi = NewsAPI()
     var arrayNews: [News] = []
-    
+    let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+
     func getNewsApi(completion: @escaping (Bool) -> Void){
         
         newsApi.getNews { (news, erro) in
@@ -31,5 +33,16 @@ class NewsController{
     
     func getElementAt(index: Int)-> News{
         return arrayNews[index]
+    }
+    
+    func requestAuthorization(completion: @escaping (Bool) -> Void){
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: options) { (didAllow, error) in
+            if error != nil || !didAllow{
+                completion(false)
+            }else{
+                completion(true)
+            }
+        }
     }
 }

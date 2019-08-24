@@ -29,7 +29,6 @@ class SignUpViewController: BaseViewController {
     }
     
     private func configureTextFields(){
-        
         userNameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -49,7 +48,6 @@ class SignUpViewController: BaseViewController {
                 return
         }
         
-        
         siginUpController.getSignUp(email: email, password: password) { (success) in
             if success{
                 UserDefaults.standard.set(username, forKey: "username")
@@ -59,20 +57,10 @@ class SignUpViewController: BaseViewController {
             }
             self.hiddenLoadingAnimation()
         }
- 
     }
     
     @IBAction func registerBtTapped(_ sender: Any) {
         performSignUp()
-
-        UNUserNotificationCenter.current().requestAuthorization(options: options) { (didAllow, error) in
-            if error != nil{
-                print("Notificação Negada")
-            }else{
-                print("Notificação Autorizada")
-            }
-        }
-        
     }
     
     
