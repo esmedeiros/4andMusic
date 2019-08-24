@@ -71,7 +71,7 @@ class SignInViewController: BaseViewController {
         self.showLoadingAnimation()
         
         signIncontroller.getSignin(email: email, password: password) { (success) in
-            if success{
+            if success {
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
             }else{
                 AlertController.showAlert(self, title: "Error", message: "Não foi possivel fazer Login")
