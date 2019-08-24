@@ -7,32 +7,33 @@
 //
 
 import UIKit
-import Firebase
 
 class ResetPasswordViewController: BaseViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var buttonReset: UIButton!
     
+    let resetController = ResetController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         emailTextField.delegate = self
-        
     }
     
     @IBAction func resetPasswordTapped(_ sender: Any) {
-        
         resetpassword()
-        
     }
     
     
-    func resetPassword(email: String, OnSucess: @escaping() -> Void, onError: @escaping(_ erroMessage: String) -> Void){
+    func resetpassword(){
+        guard let email = emailTextField.text, email != "" else{
+            AlertController.showAlert(self, title: "Attention!!!", message: "Please enter an email")
+            return
+        }
         self.showLoadingAnimation()
-        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-            
-            if error == nil{
+        
+        resetController.resetPassword(email: email) { (success) in
+            if success{
                 AlertController.showAlert(self, title: "Congratulations!!!", message: "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password")
                 self.hiddenLoadingAnimation()
             }else{
@@ -40,33 +41,14 @@ class ResetPasswordViewController: BaseViewController {
                 self.hiddenLoadingAnimation()
             }
         }
-        
-    }
-    
-    
-    func resetpassword(){
-        
-        guard let email = emailTextField.text, email != "" else{
-            AlertController.showAlert(self, title: "Attention!!!", message: "Please enter an email")
-            return
-        }
-        resetPassword(email: email, OnSucess: {
-            return
-        }, onError: { (errorMessage) in
-            return
-        })
-        
     }
     
     @IBAction func backSignIn(_ sender: Any) {
-        
         self.dismiss(animated: true, completion: nil)
-        
     }
 }
 
 extension ResetPasswordViewController: UITextFieldDelegate{
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text! == "" {
             return false
@@ -78,6 +60,7 @@ extension ResetPasswordViewController: UITextFieldDelegate{
             return false
         }
     }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         view.frame.origin.y = 0

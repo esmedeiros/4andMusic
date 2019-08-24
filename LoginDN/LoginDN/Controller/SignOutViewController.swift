@@ -21,16 +21,7 @@ class SignOutViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         setGradientBackground(colorTop: colors.orange, colorBottom: colors.pink)
-        if Auth.auth().currentUser != nil{
-            print("eh diff de nil")
-            print(Auth.auth().currentUser?.email)
-            print(Auth.auth().currentUser?.displayName)
-            
-        }
-        
         
         guard let username = Auth.auth().currentUser?.displayName, !username.isEmpty else {
             let name = UserDefaults.standard.object(forKey: "username") as? String
@@ -39,19 +30,12 @@ class SignOutViewController: BaseViewController {
         }
         
         if let usernameImg = Auth.auth().currentUser?.photoURL {
-            
             profileImage.sd_setImage(with: Auth.auth().currentUser?.photoURL, completed: nil)
         }
-        
-        
         userNameTextField.text = username
-        
-        
     }
     
     @IBAction func signOutTappedNews(_ sender: Any) {
-        
-        print("tapped")
         do{
             try Auth.auth().signOut()
             let loginManager = LoginManager()
@@ -59,7 +43,6 @@ class SignOutViewController: BaseViewController {
             self.dismiss(animated: true, completion: nil)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.chooseStoryboardToOpen()
-            print("button acionado")
         }catch{
             print(error)
             

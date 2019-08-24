@@ -13,19 +13,19 @@ import FBSDKLoginKit
 
 class SignInViewController: BaseViewController {
     
+    
+    let signIncontroller = SignInController()
+    
     @IBOutlet weak var logginFBButton: FBLoginButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loading: UIActivityIndicatorView!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
@@ -56,8 +56,6 @@ class SignInViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
     }
     
     func performSignIn(){
@@ -72,19 +70,17 @@ class SignInViewController: BaseViewController {
         }
         self.showLoadingAnimation()
         
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            guard error == nil else{
-                AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                self.hiddenLoadingAnimation()
-                return
+        signIncontroller.getSignin(email: email, password: password) { (success) in
+            if success{
+                self.performSegue(withIdentifier: "signInSegue", sender: nil)
+            }else{
+                AlertController.showAlert(self, title: "Error", message: "Não foi possivel fazer Login")
             }
-            self.performSegue(withIdentifier: "signInSegue", sender: nil)
+            self.hiddenLoadingAnimation()
         }
-        
     }
+    
     @IBAction func singInTapped(_ sender: Any) {
-        
-        
         performSignIn()
         view.frame.origin.y = 0
     }
@@ -99,29 +95,17 @@ extension SignInViewController: LoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        
-        
-        guard let curr = AccessToken.current else {return}
-        let credential = FacebookAuthProvider.credential(withAccessToken: curr.tokenString)
-        
-        print("------------------------------------ \(credential) ")
         self.showLoadingAnimation()
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-            if let error = error {
-                print(error)
+        signIncontroller.getSigninFaceBook { (success) in
+            if success{
                 self.hiddenLoadingAnimation()
-                return
-            } else {
-                print("------ Usuário autenticado com sucesso!!!!")
-                self.showLoadingAnimation()
-                
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
             }
+            self.showLoadingAnimation()
         }
     }
-    
-    
 }
+
 extension SignInViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -140,6 +124,7 @@ extension SignInViewController: UITextFieldDelegate{
             return false
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         view.frame.origin.y = 0

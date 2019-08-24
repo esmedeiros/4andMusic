@@ -14,45 +14,16 @@ import UserNotificationsUI
 class NewsViewController: UIViewController {
     
     var selected:Int = 0
-    var indexIdentifier: Int = 0
     var notificationCenter = UNUserNotificationCenter.current()
     let colors = Colors()
-    
+    let newsController = NewsController()
     
     @IBOutlet weak var tableview: UITableView!
     
-    
-    var arrayNews: [News] = []{
-        didSet{
-            tableview.reloadData()
-        }
-    }
-    
-    var getMusicHotSpot: NewsAPI = NewsAPI()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableview.delegate = self
-        tableview.dataSource = self
-        notificationCenter.delegate = self
-        
-        tableview.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: "cellNews")
-        
-        
-        getMusicHotSpot.getNews { (news, erro) in
-            if erro != nil{
-                
-                print("Deu Erro ao carregar as noticias \(erro)")
-            }else{
-                print("Show de bola!!! \(news)")
-                
-                self.arrayNews = news ?? []
-                self.tableview.reloadData()
-                
-            }
-        }
-        
+        setupTableView()
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,50 +31,46 @@ class NewsViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = nil
     }
     
+    func loadData(){
+        newsController.getNewsApi { (success) in
+            if success{
+                self.tableview.reloadData()
+            }
+        }
+    }
     
+    func setupTableView(){
+        tableview.delegate = self
+        tableview.dataSource = self
+        notificationCenter.delegate = self
+        tableview.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: "cellNews")
+    }
 }
 
 extension NewsViewController: UITableViewDataSource{
-    
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableview.dequeueReusableCell(withIdentifier: "cellNews", for: indexPath) as? NewsCell{
-            
-            cell.setCellNews(news: arrayNews[indexPath.row])
+            cell.setCellNews(news: newsController.getElementAt(index: indexPath.row))
             return cell
         }
-        
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return arrayNews.count
+        return newsController.getArraySize()
     }
-    
 }
 
 extension NewsViewController: UITableViewDelegate{
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        selected = indexPath.row
-        
-        self.performSegue(withIdentifier: "detailSegue", sender: nil)
+        self.performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
-            
-            let news: News = arrayNews[selected]
+            let news: News = newsController.getElementAt(index: sender as! Int)
             destination.newsURL = news.url
         }
     }
@@ -129,20 +96,13 @@ extension NewsViewController: UITableViewDelegate{
     }
     
     func leftSwipeIndex(index: IndexPath) -> UIContextualAction{
-        
-        //   let array = self.arrayNews[index.row]
-        
         let action = UIContextualAction(style: .normal, title: "Shared") { (action, view, completion) in
-            //self.createNotification(index: index)
-            self.selected = index.row
-            let URLToShare = self.arrayNews[self.selected].url
-            completion(true)
-            //self.sharedPressed()
+            let URLToShare = self.newsController.getElementAt(index: index.row).url
+
             let activityVC = UIActivityViewController(activityItems: [URLToShare], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             
             self.present(activityVC, animated: true, completion: nil)
-            print("clicou na linha \(index)")
         }
         action.image = UIImage(named: "share")
         action.backgroundColor = colors.orange
@@ -151,47 +111,30 @@ extension NewsViewController: UITableViewDelegate{
     }
     
     func swipeIndex(index: IndexPath) -> UIContextualAction{
-        
-        //   let array = self.arrayNews[index.row]
-        
         let action = UIContextualAction(style: .normal, title: "Schedule") { (action, view, completion) in
             self.createNotification(index: index)
-            self.selected = index.row
-            completion(true)
             AlertController.showAlert(self, title: "Alert", message: "successfully reminder")
             print("clicou na linha \(index)")
         }
         
         action.image = UIImage(named: "relogio")
         action.backgroundColor = colors.orange
-        
         return action
     }
     
     
     func identifierURL(object: News) -> String{
-        
         let url = object.url
-        
         return url
-        
     }
-    
-    func index() -> Int{
-        
-        let index = selected
-        
-        return index
-    }
-    
     
     func createNotification(index: IndexPath){
         
-        let url = identifierURL(object: arrayNews[index.row])
+        let url = identifierURL(object: newsController.getElementAt(index: index.row))
         
-        let feature = arrayNews[index.row].featured
-        let subtitle = arrayNews[index.row].headline
-        let body = arrayNews[index.row].inserted
+        let feature = newsController.getElementAt(index: index.row).featured
+        let subtitle = newsController.getElementAt(index: index.row).headline
+        let body = newsController.getElementAt(index: index.row).inserted
         
         let content = UNMutableNotificationContent()
         content.title = feature
@@ -204,10 +147,7 @@ extension NewsViewController: UITableViewDelegate{
         let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
         
-        
         let request = UNNotificationRequest(identifier: url, content: content, trigger: trigger)
-        
-        
         
         notificationCenter.add(request) { (error) in
             if let error = error {
@@ -216,10 +156,6 @@ extension NewsViewController: UITableViewDelegate{
         }
         
     }
-    func scheduleNotification(){
-    }
-    
-    
 }
 extension NewsViewController: UNUserNotificationCenterDelegate{
     
@@ -230,10 +166,6 @@ extension NewsViewController: UNUserNotificationCenterDelegate{
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        indexIdentifier = index()
-        //let sender = identifierURL(object: arrayNews[indexIdentifier])
-        
         
         if !response.notification.request.identifier.isEmpty {
             
@@ -253,13 +185,9 @@ extension NewsViewController: UNUserNotificationCenterDelegate{
         
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let destination = segue.destination as? DetailsViewController {
-                
-                let news: News = arrayNews[selected]
+                let news: News = newsController.getElementAt(index: sender as! Int)
                 destination.newsURL = news.url
             }
         }
-        
     }
-    
-    
 }

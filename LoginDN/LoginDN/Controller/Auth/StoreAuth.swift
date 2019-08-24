@@ -10,9 +10,9 @@ import Foundation
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-protocol StoreAuth: GenericStore {
-    func authFacebookUser(completion: @escaping completion<LoginManagerLoginResult?>)
-    func logoutFacebookUser()
-    func authUserWithEmail(user: User, completion: @escaping completion<AuthUser?>)
-
-}
+//protocol StoreAuth: GenericStore {
+//    func authFacebookUser(completion: @escaping completion<LoginManagerLoginResult?>)
+//    func logoutFacebookUser()
+//    func authUserWithEmail(user: User, completion: @escaping completion<AuthUser?>)
+//
+//}

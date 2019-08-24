@@ -19,7 +19,7 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-    
+    let siginUpController = SignUpController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +35,8 @@ class SignUpViewController: BaseViewController {
         passwordTextField.delegate = self
     }
     
-    
-
-    
-    
     func performSignUp(){
-        
         self.showLoadingAnimation()
-        
         guard let username = userNameTextField.text,
             username != "",
             let email = emailTextField.text,
@@ -55,18 +49,17 @@ class SignUpViewController: BaseViewController {
                 return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            guard error == nil else{
-                AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                self.hiddenLoadingAnimation()
-                return
-            }
-          
-            UserDefaults.standard.set(username, forKey: "username")
         
-            self.performSegue(withIdentifier: "signUpSegue", sender: nil)
-            
+        siginUpController.getSignUp(email: email, password: password) { (success) in
+            if success{
+                UserDefaults.standard.set(username, forKey: "username")
+                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+            }else{
+                AlertController.showAlert(self, title: "Error", message: "Não foi possivel realizar o Cadastro")
+            }
+            self.hiddenLoadingAnimation()
         }
+ 
     }
     
     @IBAction func registerBtTapped(_ sender: Any) {
@@ -111,8 +104,6 @@ extension SignUpViewController: UITextFieldDelegate{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         view.endEditing(true)
-        
     }
 }
