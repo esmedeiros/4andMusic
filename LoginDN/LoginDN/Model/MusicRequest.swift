@@ -8,14 +8,14 @@
 
 import Foundation
 
-class MusicRequest: Codable {
- 
-    var hotspots: [Music]?
-    
-    
-    enum CodingKeys: String, CodingKey {
-        case hotspots
-    }
-    
-}
+//class MusicRequest: Codable {
+//
+//    var hotspots: [Music]?
+//
+//
+//    enum CodingKeys: String, CodingKey {
+//        case hotspots
+//    }
+//
+//}
 
