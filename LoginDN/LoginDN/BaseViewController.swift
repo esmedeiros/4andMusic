@@ -11,8 +11,6 @@ import FSnapChatLoading
 
 class BaseViewController: UIViewController {
     
-
-
     let loadingView = FSnapChatLoadingView()
     
     override func viewDidLoad() {

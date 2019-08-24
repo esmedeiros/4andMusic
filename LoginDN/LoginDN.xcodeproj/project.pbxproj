@@ -10,7 +10,6 @@
 		8A81185B8D99262398550DA8 /* Pods_LoginDN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1479F4A7C2F30C835836CAE5 /* Pods_LoginDN.framework */; };
 		8E080D26230221D400DE2F51 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */; };
 		8E0D576A22FCE3FC00160B42 /* GenericStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D576922FCE3FC00160B42 /* GenericStore.swift */; };
-		8E0D576F22FCE42100160B42 /* StoreAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D576E22FCE42100160B42 /* StoreAuth.swift */; };
 		8E0D577422FCE71700160B42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D577322FCE71700160B42 /* User.swift */; };
 		8E0D577622FCE71D00160B42 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D577522FCE71D00160B42 /* AuthUser.swift */; };
 		8E0F3D85230C311A00181D0B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F3D84230C311A00181D0B /* DetailsViewController.swift */; };
@@ -44,7 +43,6 @@
 		71A5ACBA6487BF14DD986B62 /* Pods-LoginDN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDN.debug.xcconfig"; path = "Target Support Files/Pods-LoginDN/Pods-LoginDN.debug.xcconfig"; sourceTree = "<group>"; };
 		8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = ../Controller/ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8E0D576922FCE3FC00160B42 /* GenericStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStore.swift; sourceTree = "<group>"; };
-		8E0D576E22FCE42100160B42 /* StoreAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAuth.swift; sourceTree = "<group>"; };
 		8E0D577322FCE71700160B42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8E0D577522FCE71D00160B42 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		8E0F3D84230C311A00181D0B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +53,7 @@
 		8E0FBC292307713700E4D31B /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
 		8E36EB0B22FB2CB80091E885 /* LoginDN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginDN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E36EB0E22FB2CB80091E885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../Controller/SignUpViewController.swift; sourceTree = "<group>"; };
 		8E36EB1322FB2CB80091E885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E36EB1522FB2CBA0091E885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E36EB1822FB2CBA0091E885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +62,7 @@
 		8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignOutViewController.swift; path = ../Controller/SignOutViewController.swift; sourceTree = "<group>"; };
 		8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E36EB2622FB4E860091E885 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		8E51E402230CB96D009AA827 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8E51E402230CB96D009AA827 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../BaseViewController.swift; sourceTree = "<group>"; };
 		ACBAE2C8230CB45800CD289A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ACBAE2CA230CB4C000CD289A /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		ACFCA032230F70E5009A2B6B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -103,18 +101,8 @@
 				ACFCA03D2310AE30009A2B6B /* ResetController.swift */,
 				ACFCA03F2310B120009A2B6B /* SignUpController.swift */,
 				ACFCA03723109B11009A2B6B /* NewsController.swift */,
-				8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */,
-				8E0D576B22FCE3FE00160B42 /* Auth */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8E0D576B22FCE3FE00160B42 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				8E0D576E22FCE42100160B42 /* StoreAuth.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		8E0D577022FCE70600160B42 /* Model */ = {
@@ -190,7 +178,6 @@
 				8E0D8C1D2306586A00E5DCE7 /* Network */,
 				8E0D576822FCE3D500160B42 /* Controller */,
 				8E36EB0E22FB2CB80091E885 /* AppDelegate.swift */,
-				8E51E402230CB96D009AA827 /* BaseViewController.swift */,
 				8E36EB1A22FB2CBA0091E885 /* Info.plist */,
 				8E36EB2422FB444B0091E885 /* GoogleService-Info.plist */,
 			);
@@ -200,15 +187,17 @@
 		AC46E65B230CB2F100D94364 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E51E402230CB96D009AA827 /* BaseViewController.swift */,
 				8E36EB2022FB41AA0091E885 /* SignInViewController.swift */,
 				8E0F3D84230C311A00181D0B /* DetailsViewController.swift */,
 				8E080D25230221D400DE2F51 /* ResetPasswordViewController.swift */,
 				8E0FBC2723076FB700E4D31B /* NewsViewController.swift */,
 				8E36EB2222FB41BC0091E885 /* SignOutViewController.swift */,
-				8E0D8C1B2306531800E5DCE7 /* Cell */,
+				8E36EB1022FB2CB80091E885 /* SignUpViewController.swift */,
 				8E36EB1222FB2CB80091E885 /* Main.storyboard */,
 				ACBAE2C8230CB45800CD289A /* Home.storyboard */,
 				ACBAE2CA230CB4C000CD289A /* User.storyboard */,
+				8E0D8C1B2306531800E5DCE7 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E36EB1122FB2CB80091E885 /* SignUpViewController.swift in Sources */,
-				8E0D576F22FCE42100160B42 /* StoreAuth.swift in Sources */,
 				ACFCA0402310B120009A2B6B /* SignUpController.swift in Sources */,
 				8E36EB2722FB4E860091E885 /* AlertController.swift in Sources */,
 				8E0F3D85230C311A00181D0B /* DetailsViewController.swift in Sources */,
