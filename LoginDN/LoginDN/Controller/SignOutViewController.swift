@@ -17,19 +17,20 @@ class SignOutViewController: BaseViewController {
     @IBOutlet weak var userNameTextField: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
-    let colors = Colors()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground(colorTop: colors.orange, colorBottom: colors.pink)
-        
+        setupView()
+    }
+    
+    func setupView() {
+        setGradientBackground(colorTop: .orange, colorBottom: .pink)
         guard let username = Auth.auth().currentUser?.displayName, !username.isEmpty else {
             let name = UserDefaults.standard.object(forKey: "username") as? String
             userNameTextField.text = name
             return
         }
         
-        if let usernameImg = Auth.auth().currentUser?.photoURL {
+        if (Auth.auth().currentUser?.photoURL) != nil {
             profileImage.sd_setImage(with: Auth.auth().currentUser?.photoURL, completed: nil)
         }
         userNameTextField.text = username
@@ -44,20 +45,7 @@ class SignOutViewController: BaseViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.chooseStoryboardToOpen()
         }catch{
-            print(error)
-            
+            AlertController.showAlert(self, title: "Error", message: "Não foi possivel realizar o Logout")
         }
-    }
-    
-    func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = view.bounds
-        
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-    
+    }    
 }
