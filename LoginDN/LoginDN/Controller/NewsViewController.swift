@@ -12,11 +12,9 @@ import UserNotifications
 import UserNotificationsUI
 
 class NewsViewController: UIViewController {
-    
     var selected:Int = 0
     var indexIdentifier: Int = 0
     var notificationCenter = UNUserNotificationCenter.current()
-    let colors = Colors()
     let newsController = NewsController()
     
     @IBOutlet weak var tableview: UITableView!
@@ -109,7 +107,7 @@ extension NewsViewController: UITableViewDelegate{
             self.present(activityVC, animated: true, completion: nil)
         }
         action.image = UIImage(named: "share")
-        action.backgroundColor = colors.orange
+        action.backgroundColor = .orange
         
         return action
     }
@@ -129,7 +127,7 @@ extension NewsViewController: UITableViewDelegate{
         }
         
         action.image = UIImage(named: "relogio")
-        action.backgroundColor = colors.orange
+        action.backgroundColor = .orange
         return action
     }
     

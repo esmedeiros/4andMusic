@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
-class Colors{
+extension UIColor {
+    static var orange:UIColor {
+        return UIColor(red: 192/255, green: 51/255, blue: 98/255, alpha: 1.0)
+    }
     
-    let orange: UIColor = UIColor(red: 192/255, green: 51/255, blue: 98/255, alpha: 1.0)
-    let pink: UIColor = UIColor(red: 205/255, green: 99/255, blue: 69/255, alpha: 1.0)
-    
+    static var pink:UIColor {
+        return UIColor(red: 205/255, green: 99/255, blue: 69/255, alpha: 1.0)
+    }
+
 }

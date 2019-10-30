@@ -19,13 +19,6 @@ class News: Codable{
 }
 
 class NewsRequest: Codable{
-    
     var news: [News]
-    
-//    required public init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        news = try values.decode([News].self, forKey: .news)
-//    }
-
 }
 

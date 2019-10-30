@@ -20,7 +20,10 @@ class DetailsViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: newsURL ?? "")!
+        guard let news = newsURL, let url = URL(string: news) else {
+            AlertController.showAlert(self, title: "Error", message: "Não foi possível abrir a notícia")
+            return
+        }
         detailsWebKit.load(URLRequest(url: url))
     }
     

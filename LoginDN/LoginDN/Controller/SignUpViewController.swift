@@ -16,7 +16,6 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     let options: UNAuthorizationOptions = [.alert, .sound, .badge]
     let siginUpController = SignUpController()

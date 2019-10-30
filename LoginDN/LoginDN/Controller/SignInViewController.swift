@@ -19,12 +19,9 @@ class SignInViewController: BaseViewController {
     @IBOutlet weak var logginFBButton: FBLoginButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var loading: UIActivityIndicatorView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
         
@@ -53,17 +50,8 @@ class SignInViewController: BaseViewController {
         
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     func performSignIn(){
-        guard let email = emailTF.text,
-            email != "",
-            let password = passwordTF.text,
-            password != ""
-            else {
+        guard let email = emailTF.text, email != "", let password = passwordTF.text, password != "" else {
                 AlertController.showAlert(self, title: "Missing Info", message: "Please fill out all required fields")
                 return
                 
@@ -89,14 +77,9 @@ class SignInViewController: BaseViewController {
 
 extension SignInViewController: LoginButtonDelegate {
     
-    
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("loginButtonDidLogOut")
     }
-    
-    
-   // func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?)
-    
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         guard let curr = AccessToken.current else {return}
