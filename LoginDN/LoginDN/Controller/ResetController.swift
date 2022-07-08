@@ -22,4 +22,8 @@ class ResetController{
             }
         }
     }
+    
+    func teste() {
+        print("Nadilson")
+    }
 }
